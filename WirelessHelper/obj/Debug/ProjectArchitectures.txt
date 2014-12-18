@@ -1,0 +1,2 @@
+E:\Practise\WirelessHelper\ListenForConnecting\ListenForConnecting.csproj;neutral
+E:\Practise\WirelessHelper\WirelessHelper\WirelessHelper.csproj;neutral

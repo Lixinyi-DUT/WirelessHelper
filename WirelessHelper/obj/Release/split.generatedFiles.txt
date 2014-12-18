@@ -1,0 +1,4 @@
+obj\Release\split.pri
+obj\Release\split.map.txt
+obj\Release\split.scale-140.pri
+obj\Release\split.scale-140.map.txt

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>LXY</Machine>
+    <WindowsUser>_lxy</WindowsUser>
+    <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>e53a70db-560d-45dd-b968-024a800b0201</PackageIdentityName>
+    <IntermediateOutputPath>E:\Practise\WirelessHelper\WirelessHelper\obj\Debug\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="E:\Practise\WirelessHelper\WirelessHelper\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="E:\Practise\WirelessHelper\WirelessHelper\bin\Debug\WirelessHelper.exe">
+      <PackagePath>WirelessHelper.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Practise\WirelessHelper\ListenForConnecting\bin\Debug\ListenForConnecting.winmd">
+      <PackagePath>ListenForConnecting.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Practise\WirelessHelper\WirelessHelper\Assets\106_106.scale-240.png">
+      <PackagePath>Assets\106_106.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Practise\WirelessHelper\WirelessHelper\Assets\120_120.scale-240.png">
+      <PackagePath>Assets\120_120.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Practise\WirelessHelper\WirelessHelper\Assets\150_150.scale-240.png">
+      <PackagePath>Assets\150_150.scale-240.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Practise\WirelessHelper\WirelessHelper\Assets\170_170.scale-240.png">
+      <PackagePath>Assets\170_170.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Practise\WirelessHelper\WirelessHelper\Assets\310_150.scale-240.png">
+      <PackagePath>Assets\310_150.scale-240.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Practise\WirelessHelper\WirelessHelper\Assets\360_360.scale-240.png">
+      <PackagePath>Assets\360_360.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Practise\WirelessHelper\WirelessHelper\Assets\58_58.scale-240.png">
+      <PackagePath>Assets\58_58.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Practise\WirelessHelper\WirelessHelper\Assets\672_1120.scale-140.png">
+      <PackagePath>Assets\672_1120.scale-140.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Practise\WirelessHelper\WirelessHelper\Assets\744_360.scale-240.png">
+      <PackagePath>Assets\744_360.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Practise\WirelessHelper\WirelessHelper\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Practise\WirelessHelper\WirelessHelper\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Practise\WirelessHelper\WirelessHelper\bin\Debug\WirelessHelper.xr.xml">
+      <PackagePath>WirelessHelper.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\Practise\WirelessHelper\WirelessHelper\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

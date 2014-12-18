@@ -1,0 +1,19 @@
+﻿[ResourceMetadata]
+"ResourceDimensions"		"scale-240"
+"ResourceDimensions"		"language-zh-hans-cn"
+
+[Files]
+"E:\Practise\WirelessHelper\WirelessHelper\obj\Release\filemap.pri"			"resources.pri"
+"E:\Practise\WirelessHelper\WirelessHelper\obj\Release\PackageLayout\WirelessHelper.xr.xml"			"WirelessHelper.xr.xml"
+"E:\Practise\WirelessHelper\WirelessHelper\obj\Release\PackageLayout\WirelessHelper.exe"			"WirelessHelper.exe"
+"E:\Practise\WirelessHelper\WirelessHelper\obj\Release\PackageLayout\MainPage.xbf"			"MainPage.xbf"
+"E:\Practise\WirelessHelper\WirelessHelper\obj\Release\PackageLayout\ListenForConnecting.winmd"			"ListenForConnecting.winmd"
+"E:\Practise\WirelessHelper\WirelessHelper\obj\Release\PackageLayout\App.xbf"			"App.xbf"
+"E:\Practise\WirelessHelper\WirelessHelper\obj\Release\PackageLayout\Assets\744_360.scale-240.png"			"Assets\744_360.scale-240.png"
+"E:\Practise\WirelessHelper\WirelessHelper\obj\Release\PackageLayout\Assets\58_58.scale-240.png"			"Assets\58_58.scale-240.png"
+"E:\Practise\WirelessHelper\WirelessHelper\obj\Release\PackageLayout\Assets\360_360.scale-240.png"			"Assets\360_360.scale-240.png"
+"E:\Practise\WirelessHelper\WirelessHelper\obj\Release\PackageLayout\Assets\310_150.scale-240.png"			"Assets\310_150.scale-240.png"
+"E:\Practise\WirelessHelper\WirelessHelper\obj\Release\PackageLayout\Assets\170_170.scale-240.png"			"Assets\170_170.scale-240.png"
+"E:\Practise\WirelessHelper\WirelessHelper\obj\Release\PackageLayout\Assets\150_150.scale-240.png"			"Assets\150_150.scale-240.png"
+"E:\Practise\WirelessHelper\WirelessHelper\obj\Release\PackageLayout\Assets\120_120.scale-240.png"			"Assets\120_120.scale-240.png"
+"E:\Practise\WirelessHelper\WirelessHelper\obj\Release\PackageLayout\Assets\106_106.scale-240.png"			"Assets\106_106.scale-240.png"

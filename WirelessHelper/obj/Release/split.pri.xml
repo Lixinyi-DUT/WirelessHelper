@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="36599LiXinyi.DLUT" version="1.0" primary="true">
+		<Qualifiers>
+			<Scale>240</Scale>
+		</Qualifiers>
+		<ResourceMapSubtree name="Files">
+			<NamedResource name="App.xbf" uri="ms-resource://36599LiXinyi.DLUT/Files/App.xbf">
+				<Candidate type="Path">
+					<Value>App.xbf</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="MainPage.xbf" uri="ms-resource://36599LiXinyi.DLUT/Files/MainPage.xbf">
+				<Candidate type="Path">
+					<Value>MainPage.xbf</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="WirelessHelper.xr.xml" uri="ms-resource://36599LiXinyi.DLUT/Files/WirelessHelper.xr.xml">
+				<Candidate type="Path">
+					<Value>WirelessHelper.xr.xml</Value>
+				</Candidate>
+			</NamedResource>
+			<ResourceMapSubtree name="Assets">
+				<NamedResource name="106_106.png" uri="ms-resource://36599LiXinyi.DLUT/Files/Assets/106_106.png">
+					<Candidate qualifiers="Scale-240" isDefault="true" type="Path">
+						<Value>Assets\106_106.scale-240.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="120_120.png" uri="ms-resource://36599LiXinyi.DLUT/Files/Assets/120_120.png">
+					<Candidate qualifiers="Scale-240" isDefault="true" type="Path">
+						<Value>Assets\120_120.scale-240.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="150_150.png" uri="ms-resource://36599LiXinyi.DLUT/Files/Assets/150_150.png">
+					<Candidate qualifiers="Scale-240" isDefault="true" type="Path">
+						<Value>Assets\150_150.scale-240.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="170_170.png" uri="ms-resource://36599LiXinyi.DLUT/Files/Assets/170_170.png">
+					<Candidate qualifiers="Scale-240" isDefault="true" type="Path">
+						<Value>Assets\170_170.scale-240.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="310_150.png" uri="ms-resource://36599LiXinyi.DLUT/Files/Assets/310_150.png">
+					<Candidate qualifiers="Scale-240" isDefault="true" type="Path">
+						<Value>Assets\310_150.scale-240.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="360_360.png" uri="ms-resource://36599LiXinyi.DLUT/Files/Assets/360_360.png">
+					<Candidate qualifiers="Scale-240" isDefault="true" type="Path">
+						<Value>Assets\360_360.scale-240.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="58_58.png" uri="ms-resource://36599LiXinyi.DLUT/Files/Assets/58_58.png">
+					<Candidate qualifiers="Scale-240" isDefault="true" type="Path">
+						<Value>Assets\58_58.scale-240.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="672_1120.png" uri="ms-resource://36599LiXinyi.DLUT/Files/Assets/672_1120.png"/>
+				<NamedResource name="744_360.png" uri="ms-resource://36599LiXinyi.DLUT/Files/Assets/744_360.png">
+					<Candidate qualifiers="Scale-240" isDefault="true" type="Path">
+						<Value>Assets\744_360.scale-240.png</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>

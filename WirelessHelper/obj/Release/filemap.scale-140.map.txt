@@ -1,0 +1,7 @@
+﻿[ResourceMetadata]
+"ResourceId"			"filemap.scale-140"
+"ResourceDimensions"		"scale-140"
+
+[Files]
+"E:\Practise\WirelessHelper\WirelessHelper\obj\Release\filemap.scale-140.pri"			"resources.pri"
+"E:\Practise\WirelessHelper\WirelessHelper\obj\Release\PackageLayout\Assets\672_1120.scale-140.png"			"Assets\672_1120.scale-140.png"

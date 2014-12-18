@@ -1,0 +1,7 @@
+﻿[ResourceMetadata]
+"ResourceId"			"split.scale-100"
+"ResourceDimensions"		"scale-100"
+
+[Files]
+"E:\Practise\WirelessHelper\WirelessHelper\obj\Release\split.scale-100.pri"			"resources.pri"
+"E:\Practise\WirelessHelper\WirelessHelper\obj\Release\PackageLayout\Assets\Square71x71Logo.scale-100.png"			"Assets\Square71x71Logo.scale-100.png"
