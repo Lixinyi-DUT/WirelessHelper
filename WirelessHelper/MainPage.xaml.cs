@@ -243,6 +243,18 @@ namespace WirelessHelper
             }
         }
 
+        private async void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            ConnectionProfile connectionProfile = NetworkInformation.GetInternetConnectionProfile();
+            if (connectionProfile == null || connectionProfile.ProfileName != "DLUT")
+            {
+                MessageDialog message = new MessageDialog("未连接到DLUT！");
+                await message.ShowAsync();
+                return;
+            }
+            usermanager.LoginOut();
+        }
+
 
 
     }

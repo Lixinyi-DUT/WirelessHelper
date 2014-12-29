@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-  <Identity Name="36599LiXinyi.DLUT" Publisher="CN=5BFEBFED-4617-448B-9077-577E2CF7ADB8" Version="1.3.0.0" />
+  <Identity Name="36599LiXinyi.DLUT" Publisher="CN=5BFEBFED-4617-448B-9077-577E2CF7ADB8" Version="1.4.0.0" />
   <mp:PhoneIdentity PhoneProductId="e53a70db-560d-45dd-b968-024a800b0201" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>DLUT无线连接助手</DisplayName>

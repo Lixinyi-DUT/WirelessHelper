@@ -78,8 +78,17 @@
 
         <Button x:ConnectionId='6'
             Grid.Row="9"
-            HorizontalAlignment="Center"                      Foreground="{ThemeResource AppBarItemForegroundThemeBrush}">
+            HorizontalAlignment="Left"                      Foreground="{ThemeResource AppBarItemForegroundThemeBrush}"
+            Margin="50,0,0,0">
             连接网络
+        </Button>
+        
+        <Button x:ConnectionId='7'
+            Grid.Row="9"
+            HorizontalAlignment="Right"
+            Margin="0,0,50,0"
+                                  >
+            注销网络
         </Button>
     </Grid>
 </Page>

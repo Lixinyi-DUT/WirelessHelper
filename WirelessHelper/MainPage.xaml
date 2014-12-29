@@ -78,8 +78,17 @@
 
         <Button
             Grid.Row="9"
-            HorizontalAlignment="Center" Click="Button_Click" Foreground="{ThemeResource AppBarItemForegroundThemeBrush}">
+            HorizontalAlignment="Left" Click="Button_Click" Foreground="{ThemeResource AppBarItemForegroundThemeBrush}"
+            Margin="50,0,0,0">
             连接网络
+        </Button>
+        
+        <Button
+            Grid.Row="9"
+            HorizontalAlignment="Right"
+            Margin="0,0,50,0"
+            Click="Button_Click_1">
+            注销网络
         </Button>
     </Grid>
 </Page>

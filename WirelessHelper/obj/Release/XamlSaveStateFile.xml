@@ -1,6 +1,6 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <LocalAssembly PathName="e:\practise\wirelesshelper\wirelesshelper\obj\release\intermediatexaml\wirelesshelper.exe" HashGuid="ef8f79b7-9336-cbed-3790-4a9e47d10346" />
-    <ReferenceAssembly PathName="e:\practise\wirelesshelper\listenforconnecting\bin\release\listenforconnecting.winmd" HashGuid="f7bfed2b-1e75-752d-00ad-84ca3487ecb2" />
+    <LocalAssembly PathName="e:\practise\wirelesshelper\wirelesshelper\obj\release\intermediatexaml\wirelesshelper.exe" HashGuid="27feca9c-a096-77f4-346c-fba46f432e15" />
+    <ReferenceAssembly PathName="e:\practise\wirelesshelper\listenforconnecting\bin\release\listenforconnecting.winmd" HashGuid="2a9e0a6d-fac3-bc03-ab06-b2671768ddbc" />
   </ReferenceAssemblyList>
 </XamlCompilerSaveState>
