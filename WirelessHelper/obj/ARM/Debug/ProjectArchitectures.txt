@@ -1,0 +1,2 @@
+F:\Practise\WirelessHelper\ListenForConnecting\ListenForConnecting.csproj;arm
+F:\Practise\WirelessHelper\WirelessHelper\WirelessHelper.csproj;arm

@@ -1,0 +1,6 @@
+﻿[ResourceMetadata]
+"ResourceId"			"split.language-de"
+"ResourceDimensions"		"language-de-de"
+
+[Files]
+"F:\Practise\WirelessHelper\WirelessHelper\obj\ARM\Release\split.language-de.pri"			"resources.pri"

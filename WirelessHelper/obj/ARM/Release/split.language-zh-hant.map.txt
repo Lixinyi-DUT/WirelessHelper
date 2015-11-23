@@ -1,0 +1,7 @@
+﻿[ResourceMetadata]
+"ResourceId"			"split.language-zh-hant"
+"ResourceDimensions"		"language-zh-tw"
+"ResourceDimensions"		"language-zh-hk"
+
+[Files]
+"F:\Practise\WirelessHelper\WirelessHelper\obj\ARM\Release\split.language-zh-hant.pri"			"resources.pri"

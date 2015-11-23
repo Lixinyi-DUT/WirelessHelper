@@ -34,3 +34,5 @@ E:\Practise\WirelessHelper\WirelessHelper\obj\Release\qualifiers.txt
 E:\Practise\WirelessHelper\WirelessHelper\obj\Release\qualifiers.txt.intermediate
 E:\Practise\WirelessHelper\WirelessHelper\obj\Release\MultipleQualifiersPerDimensionFound.txt
 E:\Practise\WirelessHelper\WirelessHelper\obj\Release\ProjectArchitectures.txt
+F:\Practise\WirelessHelper\WirelessHelper\obj\Release\WirelessHelper.exe
+F:\Practise\WirelessHelper\WirelessHelper\obj\Release\WirelessHelper.pdb

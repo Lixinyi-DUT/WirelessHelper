@@ -1,0 +1,11 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <LocalAssembly PathName="f:\practise\wirelesshelper\wirelesshelper\obj\x86\debug\intermediatexaml\wirelesshelper.exe" HashGuid="88f92770-88f7-e03b-b59a-595d6d0191cf" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\microsoft.admediator81\1.0\references\commonconfiguration\neutral\microsoft.admediator.core.dll" HashGuid="fec80444-027d-4507-d948-53e28c9c373e" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\microsoft.admediator81\1.0\references\commonconfiguration\neutral\microsoft.admediator.windowsphone81.dll" HashGuid="a5edabf2-e23a-377a-0837-bc9b566795a0" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\microsoft.admediator81\1.0\references\commonconfiguration\x86\microsoft.admediator.windowsphone81.microsoftadvertising.dll" HashGuid="9d994ac0-3aa2-22c1-4cd0-2fb9201f1e54" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\microsoft.admediator81\1.0\references\commonconfiguration\neutral\microsoft.advertising.winmd" HashGuid="0e298d0e-35bc-69c1-ce53-3ec79c031e52" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\microsoft.vclibs\12.0\references\commonconfiguration\neutral\platform.winmd" HashGuid="58b6b6d1-928e-9908-9804-eb460e5e101b" />
+    <ReferenceAssembly PathName="f:\practise\wirelesshelper\listenforconnecting\bin\x86\debug\listenforconnecting.winmd" HashGuid="b05cee31-cf99-627b-a22f-466a5769df8c" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>

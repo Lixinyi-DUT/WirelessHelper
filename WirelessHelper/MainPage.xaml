@@ -1,17 +1,19 @@
 ﻿<Page
-    x:Class="WirelessHelper.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:WirelessHelper"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:WindowsPhone81="using:Microsoft.AdMediator.WindowsPhone81"
+    xmlns:UI="using:Microsoft.Advertising.WinRT.UI"
+    x:Class="WirelessHelper.MainPage"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50" />
-            <RowDefinition Height="20" />
+            <RowDefinition Height="60" />
             <RowDefinition Height="0" />
             <RowDefinition Height="70" />
             <RowDefinition Height="20" />
@@ -20,75 +22,75 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="*"/>
             <RowDefinition Height="*" />
-            <RowDefinition Height="80" />
+            <RowDefinition Height="40" />
         </Grid.RowDefinitions>
-        
+
         <TextBlock 
-            FontSize="20"
-            Margin="20,10,0,0"
-            Grid.Row="0">
-            DLUT无线连接助手 
+			FontSize="20"
+			Margin="20,10,0,0"
+			Grid.Row="0">
+			<Run Text="DLUT无线连接助手"/>
         </TextBlock>
-        
-        
+
+
         <TextBox
-             Grid.Row="3"
-            Margin="20,0,20,0" 
-            InputScope="EmailSmtpAddress"
-            Name="UserNameBox"
-            Header="用户名"
-            LostFocus="UserNameBox_LostFocus"
-            >
-        </TextBox>
+			Grid.Row="3"
+			Margin="20,0,20,0" 
+			InputScope="EmailSmtpAddress"
+			x:Name="UserNameBox"
+			Header="用户名"
+			LostFocus="UserNameBox_LostFocus"
+            />
 
 
 
         <PasswordBox
-             Grid.Row="5"
-            Margin="20,0,20,0"
-            Name="PassWordBox"
-            Header="密码"
-            LostFocus="PassWordBox_LostFocus"
+			Grid.Row="5"
+			Margin="20,0,20,0"
+			x:Name="PassWordBox"
+			Header="密码"
+			LostFocus="PassWordBox_LostFocus"
             />
-        
-        <ToggleSwitch
-         Grid.Row="7" FontSize="8"
-            Margin="40,10,40,10"
-            Name="BackgroundSwitch"
-            Toggled="BackgroundSwitch_Toggled">
-          后台任务
-        </ToggleSwitch>
 
         <ToggleSwitch
-         Grid.Row="6" FontSize="8"
-            Margin="40,10,40,10"
-            Toggled="SavedSwitch_Toggled"
-            Name="SavedSwitch">
-            保存用户名和密码
-        </ToggleSwitch>
+			Grid.Row="7" FontSize="8"
+			Margin="40,10,40,10"
+			x:Name="BackgroundSwitch"
+			Toggled="BackgroundSwitch_Toggled" Header="后台任务"/>
+
         <ToggleSwitch
-         Grid.Row="8" FontSize="8"
-            Margin="40,10,40,10"
-            Toggled="NotificationSwitch_Toggled"
-            Name="NotificationSwitch"
-            IsEnabled="False"
-            >
-            后台消息提醒
-        </ToggleSwitch>
+			Grid.Row="6" FontSize="8"
+			Margin="40,10,40,10"
+			Toggled="SavedSwitch_Toggled"
+			x:Name="SavedSwitch" Header="保存用户名和密码"/>
+        <ToggleSwitch
+			Grid.Row="8" FontSize="8"
+			Margin="40,10,40,10"
+			Toggled="NotificationSwitch_Toggled"
+			x:Name="NotificationSwitch"
+			IsEnabled="False"
+            Header="后台消息提醒"
+            />
 
         <Button
-            Grid.Row="9"
-            HorizontalAlignment="Left" Click="Button_Click" Foreground="{ThemeResource AppBarItemForegroundThemeBrush}"
-            Margin="50,0,0,0">
-            连接网络
-        </Button>
-        
+			Grid.Row="9"
+			HorizontalAlignment="Left" Click="Button_Click" Foreground="{ThemeResource AppBarItemForegroundThemeBrush}"
+			Margin="50,0,0,0" Content="连接网络"/>
+
         <Button
-            Grid.Row="9"
-            HorizontalAlignment="Right"
-            Margin="0,0,50,0"
-            Click="Button_Click_1">
-            注销网络
-        </Button>
+			Grid.Row="9"
+			HorizontalAlignment="Right"
+			Margin="0,0,50,0"
+			Click="Button_Click_1" Content="注销网络"/>
+        <UI:AdControl
+            Grid.Row="1"
+            HorizontalAlignment="Center"
+            Height="50"
+            Width="320"
+             ApplicationId="3f83fe91-d6be-434d-a0ae-7351c5a997f1" AdUnitId="10865270" 
+    />
+
+
+
     </Grid>
 </Page>

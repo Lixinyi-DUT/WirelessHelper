@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Files>
+  <file>\ListenForConnecting.winmd</file>
+  <file>\WirelessHelper.exe</file>
+  <file>\Microsoft.AdMediator.Core.dll</file>
+  <file>\Microsoft.AdMediator.WindowsPhone81.dll</file>
+  <file>\Microsoft.AdMediator.WindowsPhone81.MicrosoftAdvertising.dll</file>
+  <file>\Microsoft.Advertising.winmd</file>
+</Files>

@@ -1,0 +1,2039 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type='text/xsl' href='C:\ProgramData\Windows App Certification Kit\wp-results.xsl'?>
+<REPORT xml:lang="zh-CN" OVERALL_RESULT="PASS" VERSION="10.0" LATEST_VERSION="TRUE" UPDATE_DOWNLOAD_URL="" TOOLSET_ARCHITECTURE="x64" SecureBoot="FALSE" APP_TYPE="WindowsPhone" PUBLISHER_DISPLAY_NAME="CN=5BFEBFED-4617-448B-9077-577E2CF7ADB8" APP_NAME="36599LiXinyi.DLUT" APP_VERSION="1.4.0.1" OSVERSION="10.0.10240.0" OS="Microsoft Windows 10 专业版" PER_USER_APPLICATION="" PARTIAL_RUN="FALSE" LCID="2052" VALIDATION_TYPE="UI" ReportGenerationTime="2015/11/22 22:54:26" ID="d200b7117e6f8042c01583784ce79880">
+  <REQUIREMENTS>
+    <REQUIREMENT NUMBER="1" TITLE="全新可逆安装测试" RATIONALE="可逆的全新安装使用户能够成功管理(部署和删除)其系统上的应用程序。" />
+    <REQUIREMENT NUMBER="2" TITLE="安装到正确的文件夹测试" RATIONALE="Windows 将在文件系统中提供特定位置，用于存储程序和软件组件、共享应用程序数据以及特定于用户的应用程序数据。" />
+    <REQUIREMENT NUMBER="3" TITLE="数字签名的文件测试" RATIONALE="验证码数字签名使用户不仅能够确保软件是正版软件，而且能够检测文件是否被篡改，例如是否感染了病毒。" />
+    <REQUIREMENT NUMBER="4" TITLE="支持 x64 Windows 测试" RATIONALE="为了维持与 64 位版 Windows 的兼容性，应用程序必须本身支持基于 64 位或至少 32 位 Windows 的应用程序才能在 64 位上无缝运行。" />
+    <REQUIREMENT NUMBER="5" TITLE="操作系统版本检查测试" RATIONALE="应用程序不必执行版本检查以确定等同性(== 5.1)。如果你需要某项特定功能，请检查该功能是否可用。如果你需要 Windows XP，请检查是否存在 Windows XP 或更高版本(&gt;= 5.1)。这样，你的检测代码将继续对更高的 Windows 版本有效。驱动程序安装程序和卸载模块应该从不检查操作系统版本。" />
+    <REQUIREMENT NUMBER="6" TITLE="用户帐户控制(UAC)测试" RATIONALE="大多数应用程序在运行时都不需要管理员特权，只需以标准用户身份运行即可。Windows 应用程序必须有一个清单(嵌入清单或外部清单)，用于定义其执行级别以通知操作系统运行应用程序所需的特权。" />
+    <REQUIREMENT NUMBER="7" TITLE="遵循系统重新启动管理器消息" RATIONALE="如果发生紧急关闭，则向 WM_QUERYENDSESSION 返回 FALSE 的应用程序将收到 WM_ENDSESSION 并关闭；而超时以响应 WM_QUERYENDSESSION 的应用程序将终止。" />
+    <REQUIREMENT NUMBER="8" TITLE="安全模式测试" RATIONALE="默认情况下，在安全模式下将不启动通过 Windows 预安装的大多数驱动程序和服务。除非系统的基本操作或出于诊断和恢复目的需要它们，否则它们应处于禁用状态。" />
+    <REQUIREMENT NUMBER="9" TITLE="多用户会话测试" RATIONALE="Windows 用户应该能够在不出现冲突或中断的情况下运行并发会话。应用程序必须确保以多个会话的方式本地或远程运行时，应用程序的常规功能不应该受影响。应用程序的设置和数据文件不应该跨用户保持。用户的隐私和首选项应该独立于该用户的会话。" />
+    <REQUIREMENT NUMBER="10" TITLE="部署和启动测试" RATIONALE="应用程序故障(例如崩溃和挂起)是指给用户带来严重干扰并且产生挫折感。消除此类故障可提高应用程序的稳定性和可用性，进而从总体上为用户提供更好的应用程序体验。" />
+    <REQUIREMENT NUMBER="11" TITLE="兼容性和复原测试" RATIONALE="Windows 检测到某个应用程序以非兼容方式运行时，它将应用相应的兼容性修复程序以使该应用程序正常运转，从而确保良好的用户体验。但应用程序不应该依赖该行为，因为该行为的目的仅在于使旧版应用程序能够在 Windows 上正常工作。" />
+    <REQUIREMENT NUMBER="12" TITLE="包合规性测试" RATIONALE="包清单缺少一个或多个必需的属性。">
+      <TEST INDEX="77" NAME="应用程序计数" DESCRIPTION="一个包不应定义清单中的多个应用。" EXECUTIONTIME="00h:00m:02s.92ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="31" NAME="应用清单" DESCRIPTION="应用部件清单(manifest)必须包括所有必填字段的有效条目。" EXECUTIONTIME="00h:00m:02s.16ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="74" NAME="捆绑包清单" DESCRIPTION="捆绑包清单必须包括所有必填字段的有效条目。" EXECUTIONTIME="00h:00m:02s.13ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="75" NAME="包大小" DESCRIPTION="包文件大小不应大于 4 GB。" EXECUTIONTIME="00h:00m:01s.87ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="13" TITLE="Windows 安全最佳做法测试" RATIONALE="应用程序不应该更改默认的 Windows 安全设置。" />
+    <REQUIREMENT NUMBER="14" TITLE="Windows 安全功能测试" RATIONALE="应用程序必须选择启用 Windows 安全功能。">
+      <TEST INDEX="33" NAME="二进制分析器" DESCRIPTION="分析二进制文件启用的安全功能" EXECUTIONTIME="00h:00m:02s.92ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="70" NAME="禁止文件分析器" DESCRIPTION="用于检测已知的不安全文件的应用程序分析" EXECUTIONTIME="00h:00m:01s.56ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="62" NAME="私有代码签名" DESCRIPTION="应用不应对私有代码签名密钥文件进行打包。" EXECUTIONTIME="00h:00m:03s.08ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="15" TITLE="支持的 API 测试" RATIONALE="应用程序只应引用 Windows SDK 允许 Windows 应用商店应用使用的 API。">
+      <TEST INDEX="72" NAME="支持的 API" DESCRIPTION="Windows Phone 应用只能使用支持的平台 API。" EXECUTIONTIME="00h:00m:02s.87ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="17" TITLE="性能测试" RATIONALE="应用程序应该提供反应快速而敏捷的启动和挂起体验，同时占用数量合理的系统资源(CPU、文件 IO、内存等)，以便实现在以前未打开的应用程序之间快速切换和多任务处理。" />
+    <REQUIREMENT NUMBER="19" TITLE="应用清单资源测试" RATIONALE="按照应用打包规范和应用部件清单(manifest)架构的规定，应用包清单应在 resources.pri 文件中定义有效的资源。">
+      <TEST INDEX="45" NAME="应用资源" DESCRIPTION="包应该在 resources.pri 文件中定义有效资源。" EXECUTIONTIME="00h:00m:02s.40ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="61" NAME="品牌" DESCRIPTION="应用不应使用 Windows SDK 示例或 Visual Studio 打包的默认映像。" EXECUTIONTIME="00h:00m:02s.92ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="20" TITLE="调试配置测试" RATIONALE="应用不应该安装任何调试二进制文件。">
+      <TEST INDEX="46" NAME="调试配置" DESCRIPTION="应用不应该安装任何调试二进制文件。" EXECUTIONTIME="00h:00m:03s.58ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="21" TITLE="文件编码测试" RATIONALE="包含 HTML5 Windows 应用商店应用的包必须具有正确的文件编码。">
+      <TEST INDEX="49" NAME="UTF-8 文件编码" DESCRIPTION="包含 HTML5 Windows 应用商店应用的包必须具有正确的文件编码。" EXECUTIONTIME="00h:00m:01s.63ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="22" TITLE="Direct3D 功能测试" RATIONALE="应用应当正确使用 Direct3D 功能。" />
+    <REQUIREMENT NUMBER="23" TITLE="应用功能测试" RATIONALE="在服务过程中，声明特殊用途功能的程序包必须提供论证。">
+      <TEST INDEX="52" NAME="特殊用途功能" DESCRIPTION="在服务过程中，声明特殊用途功能的程序包必须提供论证。" EXECUTIONTIME="00h:00m:01s.93ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="24" TITLE="Windows 运行时元数据验证" RATIONALE="在所有的生成源中，元数据需要保持一致。">
+      <TEST INDEX="56" NAME="ExclusiveTo 属性" DESCRIPTION="一个类不能实现标记了 ExclusiveTo 另一个类的接口。" EXECUTIONTIME="00h:00m:04s.22ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="57" NAME="类型位置" DESCRIPTION="必须使用最长的匹配名称空间在元数据文件中定义类型。" EXECUTIONTIME="00h:00m:01s.36ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="55" NAME="类型名称区分大小写" DESCRIPTION="名称空间和类型名称不得只有大小写区别。" EXECUTIONTIME="00h:00m:01s.37ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="54" NAME="类型名称正确性" DESCRIPTION="Windows 名称空间中只能包含系统类型，全局名称空间中不得包含类型。" EXECUTIONTIME="00h:00m:01s.37ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="58" NAME="一般元数据正确性" DESCRIPTION="元数据文件必须满足各种要求才是有效且正确的。" EXECUTIONTIME="00h:00m:04s.19ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="53" NAME="属性" DESCRIPTION="不得使用只写和索引器属性。对应的 getter 和 setter 方法类型必须匹配。" EXECUTIONTIME="00h:00m:01s.41ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="25" TITLE="程序包健全性测试" RATIONALE="验证应用包内容以确保正确性。">
+      <TEST INDEX="63" NAME="平台的相应文件" DESCRIPTION="应用不应安装不符合目标处理器体系结构的文件。" EXECUTIONTIME="00h:00m:01s.67ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="26" TITLE="高 DPI 支持" RATIONALE="该应用程序需要设置 DPI 感知，以确保各种各样的高 DPI 显示设置的 UI 外观稳定出色。" />
+    <REQUIREMENT NUMBER="27" TITLE="资源使用情况测试" RATIONALE="WinJS 后台任务需要调用 close()以释放资源。">
+      <TEST INDEX="68" NAME="WinJS 后台任务" DESCRIPTION="WinJS 后台任务需要调用 close()以释放资源。" EXECUTIONTIME="00h:00m:01s.68ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+  </REQUIREMENTS>
+  <APPLICATIONS>
+    <Installed_Programs>
+      <Program Name="36599LiXinyi.DLUT" Type="Application" Source="AppxPackage" Publisher="CN=5BFEBFED-4617-448B-9077-577E2CF7ADB8" Version="1.4.0.1" Language="1033" InstallDate="11/22/2015 14:53:45" RootDirPath="C:\Windows\temp\appcert_3BCC\36599LiXinyi.DLUT_1.4.0.1_arm__5zgx6wbtjq6ry" Id="0000d07f6245f404473ad7bde10e24efff0b00000904">
+        <Indicators>
+          <WindowsStoreAppManifestIndicators>
+            <PackageManifest PackageFullName="36599lixinyi.dlut_1.4.0.1_arm__5zgx6wbtjq6ry">
+              <Package>
+                <Identity Name="36599LiXinyi.DLUT" Publisher="CN=5BFEBFED-4617-448B-9077-577E2CF7ADB8" Version="1.4.0.1" ProcessorArchitecture="arm" />
+                <PhoneIdentity PhoneProductId="e53a70db-560d-45dd-b968-024a800b0201" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+                <Properties>
+                  <DisplayName>DLUT无线连接助手</DisplayName>
+                  <PublisherDisplayName>Li_Xinyi</PublisherDisplayName>
+                  <Logo>Assets\120_120.png</Logo>
+                </Properties>
+                <Prerequisites>
+                  <OSMinVersion>6.3.1</OSMinVersion>
+                  <OSMaxVersionTested>6.3.1</OSMaxVersionTested>
+                </Prerequisites>
+                <Resources>
+                  <Resource Language="ZH-CN" />
+                  <Resource Scale="240" />
+                </Resources>
+                <Applications>
+                  <Application Id="App" Executable="WirelessHelper.exe" EntryPoint="WirelessHelper.App">
+                    <VisualElements DisplayName="DLUT无线连接助手" Square150x150Logo="Assets\360_360.png" Square44x44Logo="Assets\106_106.png" Description="WirelessHelper" ForegroundText="light" BackgroundColor="transparent" ToastCapable="true">
+                      <LockScreen Notification="badge" BadgeLogo="Assets\58_58.png" />
+                      <DefaultTile Wide310x150Logo="Assets\744_360.png" Square71x71Logo="Assets\170_170.png">
+                        <ShowNameOnTiles>
+                          <ShowOn Tile="square150x150Logo" />
+                          <ShowOn Tile="wide310x150Logo" />
+                        </ShowNameOnTiles>
+                      </DefaultTile>
+                    </VisualElements>
+                    <Extensions>
+                      <Extension Category="windows.backgroundTasks" EntryPoint="ListenForConnecting.ListenTask">
+                        <BackgroundTasks>
+                          <Task Type="deviceUse" />
+                        </BackgroundTasks>
+                      </Extension>
+                    </Extensions>
+                  </Application>
+                </Applications>
+                <Capabilities>
+                  <Capability Name="internetClientServer" />
+                </Capabilities>
+                <Dependencies>
+                  <PackageDependency Name="Microsoft.VCLibs.120.00.Phone" MinVersion="12.0.30113.0" />
+                </Dependencies>
+                <Extensions>
+                  <Extension Category="windows.activatableClass.inProcessServer">
+                    <InProcessServer>
+                      <Path>CLRHost.dll</Path>
+                      <ActivatableClass ActivatableClassId="ListenForConnecting.ListenTask" ThreadingModel="both" />
+                    </InProcessServer>
+                  </Extension>
+                  <Extension Category="windows.activatableClass.inProcessServer">
+                    <InProcessServer>
+                      <Path>UniversalXamlAdControl.WindowsPhone.dll</Path>
+                      <ActivatableClass ActivatableClassId="Microsoft.Advertising.WinRT.UI.AdControl" ThreadingModel="both" />
+                      <ActivatableClass ActivatableClassId="Microsoft.Advertising.WinRT.UI.ManipulationStateChangedEventArgs" ThreadingModel="both" />
+                      <ActivatableClass ActivatableClassId="Microsoft.Advertising.WinRT.UI.ExpandProperties" ThreadingModel="both" />
+                      <ActivatableClass ActivatableClassId="Microsoft.Advertising.WinRT.UI.InterstitialAd" ThreadingModel="both" />
+                      <ActivatableClass ActivatableClassId="Microsoft.Advertising.Shared.WinRT.Advertisement" ThreadingModel="both" />
+                      <ActivatableClass ActivatableClassId="Microsoft.Advertising.Shared.WinRT.AdPlacement" ThreadingModel="STA" />
+                      <ActivatableClass ActivatableClassId="Microsoft.Advertising.Shared.WinRT.AdTagCollection" ThreadingModel="both" />
+                      <ActivatableClass ActivatableClassId="Microsoft.Advertising.Shared.WinRT.AdScheduler" ThreadingModel="both" />
+                      <ActivatableClass ActivatableClassId="Microsoft.Advertising.Shared.WinRT.AdErrorEventArgs" ThreadingModel="both" />
+                      <ActivatableClass ActivatableClassId="Microsoft.Advertising.Shared.WinRT.SdkInfoProvider" ThreadingModel="both" />
+                      <ActivatableClass ActivatableClassId="Microsoft.Advertising.Shared.WinRT.HttpClient" ThreadingModel="both" />
+                      <ActivatableClass ActivatableClassId="Microsoft.Advertising.Shared.WinRT.AdExtension" ThreadingModel="both" />
+                      <ActivatableClass ActivatableClassId="Microsoft.Advertising.Shared.WinRT.UserUtils" ThreadingModel="both" />
+                      <ActivatableClass ActivatableClassId="Microsoft.Advertising.Shared.WinRT.EventLogging" ThreadingModel="both" />
+                      <ActivatableClass ActivatableClassId="Microsoft.Advertising.Shared.WinRT.AdErrorReport" ThreadingModel="STA" />
+                      <ActivatableClass ActivatableClassId="Microsoft.Advertising.UniversalXamlAdControl_WindowsPhone_XamlTypeInfo.XamlMetaDataProvider" ThreadingModel="both" />
+                    </InProcessServer>
+                  </Extension>
+                </Extensions>
+              </Package>
+            </PackageManifest>
+            <BundleManifest PackageFamilyName="36599LiXinyi.DLUT_5zgx6wbtjq6ry">
+              <Bundle SchemaVersion="2.0">
+                <Identity Name="36599LiXinyi.DLUT" Publisher="CN=5BFEBFED-4617-448B-9077-577E2CF7ADB8" Version="2015.1122.1453.0" />
+                <Packages>
+                  <Package Type="application" Version="1.4.0.1" Architecture="arm" FileName="WirelessHelper_1.4.0.1_ARM.appx" Offset="61" Size="1517711">
+                    <Resources>
+                      <Resource Language="ZH-CN" />
+                      <Resource Scale="240" />
+                    </Resources>
+                  </Package>
+                  <Package Type="resource" Version="1.4.0.1" ResourceId="split.language-zh-hans" FileName="WirelessHelper_1.4.0.1_language-zh-hans.appx" Offset="1517870" Size="3944">
+                    <Resources>
+                      <Resource Language="zh-cn" />
+                    </Resources>
+                  </Package>
+                  <Package Type="resource" Version="1.4.0.1" ResourceId="split.scale-140" FileName="WirelessHelper_1.4.0.1_scale-140.appx" Offset="1521905" Size="17486">
+                    <Resources>
+                      <Resource Scale="140" />
+                    </Resources>
+                  </Package>
+                </Packages>
+              </Bundle>
+            </BundleManifest>
+          </WindowsStoreAppManifestIndicators>
+        </Indicators>
+        <StaticProperties>
+          <Files Id="000044f628eda59b624871b06c7a4a786df72a22665a">
+            <File Name="Microsoft.AdMediator.Core.dll" Id="00007a8744f2005dd1633b9e61dad94e4888eb93e77d" ProductName="AdMediator.Core" CompanyName="Microsoft" ProductVersion="2.0.1.0" VerLanguage="0" SwitchBackContext="0x0100000000000400" FileVersion="2.0.1.0" Size="0x26c98" SizeOfImage="0x2c000" PeHeaderHash="0101474e9be15e6465ac3629aec09b4e41112297ea71" PeChecksum="0x2afd1" BinProductVersion="2.0.1.0" BinFileVersion="2.0.1.0" FileDescription="AdMediator.Core" InternalName="Microsoft.AdMediator.Core.dll" LegalCopyright="Copyright ©  Microsoft 2014" LinkDate="10/05/2015 22:45:28" BinaryType="PE32_CLR_IL" ClrVersion="v4.0.30319" OriginalFileName="Microsoft.AdMediator.Core.dll" LowerCaseLongPath="c:\windows\temp\appcert_3bcc\36599lixinyi.dlut_1.4.0.1_arm__5zgx6wbtjq6ry\microsoft.admediator.core.dll" LongPathHash="0000d99b637004485e4ee78a7e77d71c523c58b9f8d0" />
+            <File Name="bootstrap.html" Id="00001c7b80188d07b45087efbcdcee8f4d6ec37865cc" Size="0x72f" BinaryType="DATA_ONLY" LowerCaseLongPath="c:\windows\temp\appcert_3bcc\36599lixinyi.dlut_1.4.0.1_arm__5zgx6wbtjq6ry\microsoft.advertising\bootstrap.html" LongPathHash="0000ceadf06de946f58e8dd985ec1319f8a241c491ae" />
+            <File Name="ListenForConnecting.winmd" Id="0000c9a40202f64f4e0622dadf3d0b4d4ac1d1c33e28" ProductName="ListenForConnecting" ProductVersion="1.0.0.0" VerLanguage="0" SwitchBackContext="0x0100000000000602" FileVersion="1.0.0.0" Size="0x2800" SizeOfImage="0x8000" PeHeaderHash="010166b99b2a7562c760a06e3f8648b9be2d927d742d" PeChecksum="0x0" BinProductVersion="1.0.0.0" BinFileVersion="1.0.0.0" FileDescription="ListenForConnecting" InternalName="ListenForConnecting.winmdobj" LegalCopyright="Copyright ©  2014" LinkDate="11/22/2015 14:52:31" BinaryType="PE32_CLR_IL" ClrVersion="WindowsRuntime 1.3;CLR v4.0.30319" OriginalFileName="ListenForConnecting.winmdobj" LowerCaseLongPath="c:\windows\temp\appcert_3bcc\36599lixinyi.dlut_1.4.0.1_arm__5zgx6wbtjq6ry\listenforconnecting.winmd" LongPathHash="000086d88a3ae325815d8699ae5f910742a066df3e73" />
+            <File Name="resources.pri" Id="0000980d65d53b550f1add364574a89e925b3e5f742a" Size="0x23e0" BinaryType="DATA_ONLY" LowerCaseLongPath="c:\windows\temp\appcert_3bcc\36599lixinyi.dlut_1.4.0.1_arm__5zgx6wbtjq6ry\resources.pri" LongPathHash="00003f145e36ecb921dc9ac1a1d3a375a0d39a772b99" />
+            <File Name="bootstrap.js" Id="000027f30c425ba12bc29ea469935b7856fb0318f955" Size="0x4d19" BinaryType="DATA_ONLY" LowerCaseLongPath="c:\windows\temp\appcert_3bcc\36599lixinyi.dlut_1.4.0.1_arm__5zgx6wbtjq6ry\msadvertisingjs\ads\bootstrap.js" LongPathHash="0000f13967abe67ee18fe41b5e9901488f63bba01f3e" />
+            <File Name="Ormma.js" Id="00006d49084d74beef36f0d6017caf710f77b3270093" Size="0x73d8" BinaryType="DATA_ONLY" LowerCaseLongPath="c:\windows\temp\appcert_3bcc\36599lixinyi.dlut_1.4.0.1_arm__5zgx6wbtjq6ry\msadvertisingjs\ads\ormma.js" LongPathHash="0000f3c2e98deaf105d893f99c112e90bb7d7b1a9365" />
+            <File Name="Microsoft.AdMediator.WindowsPhone81.dll" Id="0000a7e9a33bbcd60153461fa8c1067d9dd12a7c31d6" ProductName="AdMediator.WindowsPhone81" CompanyName="Microsoft" ProductVersion="2.0.1.0" VerLanguage="0" SwitchBackContext="0x0100000000000600" FileVersion="2.0.1.0" Size="0xf298" SizeOfImage="0x14000" PeHeaderHash="01018a96f323e9395bdbbe0de2995d8f78a5221d4cc1" PeChecksum="0x1530b" BinProductVersion="2.0.1.0" BinFileVersion="2.0.1.0" FileDescription="AdMediator.WindowsPhone81" InternalName="Microsoft.AdMediator.WindowsPhone81.dll" LegalCopyright="Copyright ©  Microsoft 2014" LinkDate="09/25/2015 22:09:08" BinaryType="PE32_CLR_IL" ClrVersion="v4.0.30319" OriginalFileName="Microsoft.AdMediator.WindowsPhone81.dll" LowerCaseLongPath="c:\windows\temp\appcert_3bcc\36599lixinyi.dlut_1.4.0.1_arm__5zgx6wbtjq6ry\microsoft.admediator.windowsphone81.dll" LongPathHash="00001cae33fbe25a76d5213904f69f1cdca2ef40ad0d" />
+            <File Name="UniversalXamlAdControl.WindowsPhone.dll" Id="000069ffbba6a957abdb2729c1a575904b08ef17386a" ProductName="Xbox Live" CompanyName="Microsoft Corporation" ProductVersion="8.5.1510.30002" VerLanguage="0" SwitchBackContext="0x0100000000000602" FileVersion="8.5.1510.30002" Size="0x3aa6b0" SizeOfImage="0x3ac000" PeHeaderHash="0101df8e58f6691f71a20ddc361f643d9cba41712662" PeChecksum="0x3b3da5" BinProductVersion="8.5.1510.30002" BinFileVersion="8.5.1510.30002" FileDescription="UniversalXamlAdControl.WindowsPhone.dll" InternalName="UniversalXamlAdControl.WindowsPhone" LegalCopyright="©Microsoft Corporation.  All rights reserved." LinkDate="10/30/2015 21:19:52" BinaryType="PE32_ARM" OriginalFileName="UniversalXamlAdControl.WindowsPhone.dll" LowerCaseLongPath="c:\windows\temp\appcert_3bcc\36599lixinyi.dlut_1.4.0.1_arm__5zgx6wbtjq6ry\universalxamladcontrol.windowsphone.dll" LongPathHash="00000409f6ddd08e3924469fd8385d138c933501568f" />
+            <File Name="WirelessHelper.exe" Id="0000841064dc97329bba22fe0fb43fc3722bace4cf9d" ProductName="WirelessHelper" ProductVersion="1.0.0.0" VerLanguage="0" SwitchBackContext="0x0100000000000602" FileVersion="1.0.0.0" Size="0x9200" SizeOfImage="0xe000" PeHeaderHash="01012ce9c6d7dde29422f16435cb12365a63aca65b35" PeChecksum="0x0" BinProductVersion="1.0.0.0" BinFileVersion="1.0.0.0" FileDescription="WirelessHelper" InternalName="WirelessHelper.exe" LegalCopyright="Copyright ©  2014" LinkDate="11/22/2015 14:52:43" BinaryType="PE32_CLR_IL" ClrVersion="v4.0.30319" OriginalFileName="WirelessHelper.exe" LowerCaseLongPath="c:\windows\temp\appcert_3bcc\36599lixinyi.dlut_1.4.0.1_arm__5zgx6wbtjq6ry\wirelesshelper.exe" LongPathHash="000077b7f1281de5cb653d9fdb9524e34e64d364116b" />
+            <File Name="Microsoft.Advertising.winmd" Id="00002d18515535909f48e87128e2ea3b21de47344799" SwitchBackContext="0x0100000000000602" Size="0x9cb0" SizeOfImage="0x9000" PeHeaderHash="0101b4ee0eaf5af1a9fdb8e255b1c7d8517a0d10ef0b" PeChecksum="0xfe7c" LinkDate="10/30/2015 21:13:01" BinaryType="PE32_CLR_IL" ClrVersion="WindowsRuntime 1.3" LowerCaseLongPath="c:\windows\temp\appcert_3bcc\36599lixinyi.dlut_1.4.0.1_arm__5zgx6wbtjq6ry\microsoft.advertising.winmd" LongPathHash="00008b1c1089fc4929566dbd1e26629bff07917bdafd" />
+            <File Name="Microsoft.AdMediator.WindowsPhone81.MicrosoftAdvertising.dll" Id="0000bbd1ded2617d9c2aeac34cf44906dfa4952494af" ProductName="AdAdapter.WindowsPhone81.MicrosoftAdvertising" CompanyName="Microsoft" ProductVersion="2.0.1.0" VerLanguage="0" SwitchBackContext="0x0100000000000600" FileVersion="2.0.1.0" Size="0x5498" SizeOfImage="0xa000" PeHeaderHash="0101140459740b0265036b7b7bed692b6551f9aa3d4a" PeChecksum="0x86b8" BinProductVersion="2.0.1.0" BinFileVersion="2.0.1.0" FileDescription="AdAdapter.WindowsPhone81.MicrosoftAdvertising" InternalName="Microsoft.AdMediator.WindowsPhone81.MicrosoftAdvertising.dll" LegalCopyright="Copyright ©  Microsoft 2014" LinkDate="10/07/2015 23:28:55" BinaryType="PE32_CLR_IL" ClrVersion="v4.0.30319" OriginalFileName="Microsoft.AdMediator.WindowsPhone81.MicrosoftAdvertising.dll" LowerCaseLongPath="c:\windows\temp\appcert_3bcc\36599lixinyi.dlut_1.4.0.1_arm__5zgx6wbtjq6ry\microsoft.admediator.windowsphone81.microsoftadvertising.dll" LongPathHash="0000f3430291f22931b14dfc98d71db3e82a67ba71ac" />
+          </Files>
+        </StaticProperties>
+      </Program>
+    </Installed_Programs>
+  </APPLICATIONS>
+  <DEPENDENCY_INFORMATION>
+    <AitStaticAnalysis Type="Template">
+      <AitFile ErrorCode="0" Name="bootstrap.html" Id="00001c7b80188d07b45087efbcdcee8f4d6ec37865cc">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="navigator.mimeTypes" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="bootstrap.js" Id="000027f30c425ba12bc29ea469935b7856fb0318f955">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="document.addEventListener" />
+          <AitFeature Name="document.body.focus" />
+          <AitFeature Name="window.addEventListener" />
+          <AitFeature Name="window.external.notify" />
+          <AitFeature Name="window.removeEventListener" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="Microsoft.Advertising.winmd" Id="00002d18515535909f48e87128e2ea3b21de47344799">
+        <AitCategory Id="DotNet">
+          <AitFeature Name="System.Collections.Generic.IDictionary`2" />
+          <AitFeature Name="System.Collections.Generic.IReadOnlyDictionary`2" />
+          <AitFeature Name="System.Collections.Generic.IReadOnlyList`1" />
+          <AitFeature Name="System.Enum" />
+          <AitFeature Name="System.EventHandler`1" />
+          <AitFeature Name="System.IDisposable" />
+          <AitFeature Name="System.IDisposable.Dispose" />
+          <AitFeature Name="System.MulticastDelegate" />
+          <AitFeature Name="System.Object" />
+          <AitFeature Name="System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken" />
+          <AitFeature Name="System.Type" />
+          <AitFeature Name="System.Uri" />
+          <AitFeature Name="System.ValueType" />
+        </AitCategory>
+        <AitCategory Id="DotNetWinRt">
+          <AitFeature Name="Windows.Foundation.IAsyncAction" />
+          <AitFeature Name="Windows.Foundation.IAsyncOperation`1" />
+          <AitFeature Name="Windows.Foundation.Metadata.ActivatableAttribute" />
+          <AitFeature Name="Windows.Foundation.Metadata.ActivatableAttribute..ctor" />
+          <AitFeature Name="Windows.Foundation.Metadata.DefaultAttribute" />
+          <AitFeature Name="Windows.Foundation.Metadata.DefaultAttribute..ctor" />
+          <AitFeature Name="Windows.Foundation.Metadata.DefaultOverloadAttribute" />
+          <AitFeature Name="Windows.Foundation.Metadata.DefaultOverloadAttribute..ctor" />
+          <AitFeature Name="Windows.Foundation.Metadata.ExclusiveToAttribute" />
+          <AitFeature Name="Windows.Foundation.Metadata.ExclusiveToAttribute..ctor" />
+          <AitFeature Name="Windows.Foundation.Metadata.GuidAttribute" />
+          <AitFeature Name="Windows.Foundation.Metadata.GuidAttribute..ctor" />
+          <AitFeature Name="Windows.Foundation.Metadata.MarshalingBehaviorAttribute" />
+          <AitFeature Name="Windows.Foundation.Metadata.MarshalingBehaviorAttribute..ctor" />
+          <AitFeature Name="Windows.Foundation.Metadata.MarshalingType" />
+          <AitFeature Name="Windows.Foundation.Metadata.OverloadAttribute" />
+          <AitFeature Name="Windows.Foundation.Metadata.OverloadAttribute..ctor" />
+          <AitFeature Name="Windows.Foundation.Metadata.StaticAttribute" />
+          <AitFeature Name="Windows.Foundation.Metadata.StaticAttribute..ctor" />
+          <AitFeature Name="Windows.Foundation.Metadata.ThreadingAttribute" />
+          <AitFeature Name="Windows.Foundation.Metadata.ThreadingAttribute..ctor" />
+          <AitFeature Name="Windows.Foundation.Metadata.ThreadingModel" />
+          <AitFeature Name="Windows.Foundation.Metadata.VersionAttribute" />
+          <AitFeature Name="Windows.Foundation.Metadata.VersionAttribute..ctor" />
+          <AitFeature Name="Windows.Foundation.Metadata.WebHostHiddenAttribute" />
+          <AitFeature Name="Windows.Foundation.Metadata.WebHostHiddenAttribute..ctor" />
+          <AitFeature Name="Windows.Foundation.Point" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Control" />
+          <AitFeature Name="Windows.UI.Xaml.Markup.IXamlMetadataProvider" />
+          <AitFeature Name="Windows.UI.Xaml.Markup.IXamlMetadataProvider.GetXamlType" />
+          <AitFeature Name="Windows.UI.Xaml.Markup.IXamlMetadataProvider.GetXmlnsDefinitions" />
+          <AitFeature Name="Windows.UI.Xaml.Markup.IXamlType" />
+          <AitFeature Name="Windows.UI.Xaml.Markup.XmlnsDefinition" />
+          <AitFeature Name="Windows.UI.Xaml.RoutedEventArgs" />
+          <AitFeature Name="Windows.UI.Xaml.TemplatePartAttribute" />
+          <AitFeature Name="Windows.UI.Xaml.TemplatePartAttribute..ctor" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="UniversalXamlAdControl.WindowsPhone.dll" Id="000069ffbba6a957abdb2729c1a575904b08ef17386a">
+        <AitCategory Id="Com">
+          <AitFeature Name="{00000000-0000-0000-c000-000000000046}" />
+          <AitFeature Name="{00000003-0000-0000-c000-000000000046}" />
+          <AitFeature Name="{00000035-0000-0000-c000-000000000046}" />
+          <AitFeature Name="{00000036-0000-0000-c000-000000000046}" />
+          <AitFeature Name="{00000038-0000-0000-c000-000000000046}" />
+          <AitFeature Name="{000001da-0000-0000-c000-000000000046}" />
+          <AitFeature Name="{0065004e-0074-0077-6f00-72006b002000}" />
+          <AitFeature Name="{036d2c08-df29-41af-8aa2-d774be62ba6f}" />
+          <AitFeature Name="{0385688e-e3c7-5c5e-a389-5524ede349f1}" />
+          <AitFeature Name="{05eb86f1-7140-5517-b88d-cbaebe57e6b1}" />
+          <AitFeature Name="{06386a7a-e009-5b0b-ab68-a8e48b516647}" />
+          <AitFeature Name="{064e24dd-29c2-4f83-9ac1-9ee11578beb3}" />
+          <AitFeature Name="{08c1ddb6-0cbd-4a9a-b5d3-2f852dc37e81}" />
+          <AitFeature Name="{0a299774-3e4e-fc42-1d9d-72cee105ca57}" />
+          <AitFeature Name="{0bc465dc-be4d-4d0d-9549-2208b715f40d}" />
+          <AitFeature Name="{10406ad6-b090-4a4a-b2ad-d682df27130f}" />
+          <AitFeature Name="{1115b13c-25d2-480b-89dc-eb3dcbd6b7fa}" />
+          <AitFeature Name="{139d959e-e7b5-5cb6-a596-4b544478da9b}" />
+          <AitFeature Name="{1791587a-2a7c-4981-a2d8-ab99fffc65b9}" />
+          <AitFeature Name="{1a7c6c05-3fef-5eeb-aaff-625ee3ebc07c}" />
+          <AitFeature Name="{1c741d59-2122-47d5-a856-83f3d4214875}" />
+          <AitFeature Name="{1e036276-2f60-55f6-b7f3-f86079e6900b}" />
+          <AitFeature Name="{23d86411-202f-41b2-8c5b-a8a3b333800b}" />
+          <AitFeature Name="{297445d3-fb63-4135-8909-4e354c061466}" />
+          <AitFeature Name="{2dfb8a1f-6b10-4ef8-9f83-efcce8faec37}" />
+          <AitFeature Name="{2f13c006-a03a-5f69-b090-75a43e33423e}" />
+          <AitFeature Name="{2f2d6c29-5473-5f3e-92e7-96572bb990e2}" />
+          <AitFeature Name="{30d5a829-7fa4-4026-83bb-d75bae4ea99e}" />
+          <AitFeature Name="{31af3271-e3b4-442d-a341-4c0226b2725b}" />
+          <AitFeature Name="{33ee3134-1dd6-4e3a-8067-d1c162e8642b}" />
+          <AitFeature Name="{346dd6e7-976e-4bc3-815d-ece243bc0f33}" />
+          <AitFeature Name="{37500595-dcf0-5d27-b8c4-cf388e374de8}" />
+          <AitFeature Name="{393de7de-6fd0-4c0d-bb71-47244a113e93}" />
+          <AitFeature Name="{3bee8834-b9a7-5a80-a746-5ef097227878}" />
+          <AitFeature Name="{3c00fd60-2950-5939-a21a-2d12c5a01b8a}" />
+          <AitFeature Name="{3dddecf4-1d39-58e8-83b1-dbed541c7f35}" />
+          <AitFeature Name="{3e1fe603-f897-5263-b328-0806426b8a79}" />
+          <AitFeature Name="{3e5d6eaf-f169-5d60-92b0-98cd6bd8f808}" />
+          <AitFeature Name="{411136f7-770d-599c-8545-6d053a6a1799}" />
+          <AitFeature Name="{4207a996-ca2f-42f7-bde8-8b10457a7f30}" />
+          <AitFeature Name="{46a5433d-4ffb-48df-8732-4e15c834816b}" />
+          <AitFeature Name="{4825d6c4-835a-5da1-9bdd-12e97e16fb7a}" />
+          <AitFeature Name="{4bd682dd-7554-40e9-9a9b-82654ede7e62}" />
+          <AitFeature Name="{51c3d2fd-b8a1-5620-b746-7ee6d533aca3}" />
+          <AitFeature Name="{548cefbd-bc8a-5fa0-8df2-957440fc8bf4}" />
+          <AitFeature Name="{54dfd981-1968-4ca3-b958-e595d16505eb}" />
+          <AitFeature Name="{575933df-34fe-4480-af15-07691f3d5d9b}" />
+          <AitFeature Name="{5862cc46-1f7d-479b-92a6-de7858fe8d54}" />
+          <AitFeature Name="{58aa07a8-fed6-46f7-b4c5-fb1ba72108d6}" />
+          <AitFeature Name="{5a648006-843a-4da9-865b-9d26e5dfad7b}" />
+          <AitFeature Name="{5a9f8a25-d142-44a4-8231-fd676724f29b}" />
+          <AitFeature Name="{5c21c742-2ced-4fd9-ba38-7118d40e966b}" />
+          <AitFeature Name="{5c526665-f60e-4912-af59-5fe0680f089d}" />
+          <AitFeature Name="{5cc5b382-e6dd-4991-abef-06d8d2e7bd0c}" />
+          <AitFeature Name="{5eef7817-93dd-5c0b-9e5a-eb490408f3a9}" />
+          <AitFeature Name="{60141efb-f2f9-5377-96fd-f8c60d9558b5}" />
+          <AitFeature Name="{60310303-49c5-52e6-abc6-a9b36eccc716}" />
+          <AitFeature Name="{62418240-e6d3-4705-a1dc-39156456ee29}" />
+          <AitFeature Name="{624cd4e1-d007-43b1-9c03-af4d3e6258c4}" />
+          <AitFeature Name="{63dbba8b-d0db-4fe1-b745-f9433afdc25b}" />
+          <AitFeature Name="{64e9be00-4dc1-493d-abe7-cbd3c577490d}" />
+          <AitFeature Name="{676d0be9-b65c-41c6-ba40-58cf87f201c1}" />
+          <AitFeature Name="{68d940cc-9ff0-49ce-b141-3f07ec477b97}" />
+          <AitFeature Name="{68e0e810-f6ea-42bc-855b-5d9b67e6a262}" />
+          <AitFeature Name="{6a1d6c07-076d-49f2-8314-f52c9c9a8331}" />
+          <AitFeature Name="{6cd0e74e-ee65-4489-9ebf-ca43e87ba637}" />
+          <AitFeature Name="{6f3b411f-d147-59f1-bbe4-7bec396c7b6e}" />
+          <AitFeature Name="{70e05ac4-d38d-4bab-831f-4a22ef52ac86}" />
+          <AitFeature Name="{71ba143f-598e-49d0-84eb-8febaedcc195}" />
+          <AitFeature Name="{7279fc81-709d-4095-b63d-69fe4b0d9030}" />
+          <AitFeature Name="{72e2fa9c-6dea-4cbe-a159-06ce95fbeced}" />
+          <AitFeature Name="{737ef309-ea41-4d96-a71c-98e98efcab07}" />
+          <AitFeature Name="{786f2b75-9aa0-454d-ae06-a2466e37c832}" />
+          <AitFeature Name="{7920eab1-a2e5-479a-bd50-6cef3c0b4970}" />
+          <AitFeature Name="{797c4539-45bd-4633-a044-bfb02ef5170f}" />
+          <AitFeature Name="{7e9f3d59-0f07-4bc9-977d-03763ff8154f}" />
+          <AitFeature Name="{80332d21-aee1-4a39-baa2-07ed8c96daf6}" />
+          <AitFeature Name="{80646519-5e2a-595d-a8cd-2a24b4067f1b}" />
+          <AitFeature Name="{84f14c22-a00a-5272-8d3d-82112e66df00}" />
+          <AitFeature Name="{855bc230-8a11-4e18-a136-4bc21c7827b0}" />
+          <AitFeature Name="{86c4f619-67b6-51c7-b30d-d8cf13625327}" />
+          <AitFeature Name="{8806a321-1e06-422c-a1cc-01696559e021}" />
+          <AitFeature Name="{88d96a09-f192-11d4-a65f-0040963251e5}" />
+          <AitFeature Name="{8c304ebb-6615-50a4-8829-879ecd443236}" />
+          <AitFeature Name="{905a0fe0-bc53-11df-8c49-001e4fc686da}" />
+          <AitFeature Name="{905a0fe1-bc53-11df-8c49-001e4fc686da}" />
+          <AitFeature Name="{905a0fe2-bc53-11df-8c49-001e4fc686da}" />
+          <AitFeature Name="{9343b6e7-e3d2-5e4a-ab2d-2bce4919a6a4}" />
+          <AitFeature Name="{94ea2b94-e9cc-49e0-c0ff-ee64ca8f5b90}" />
+          <AitFeature Name="{98055b5a-36bb-5962-971f-8b87619eb17e}" />
+          <AitFeature Name="{98b9acc1-4b56-532e-ac73-03d5291cca90}" />
+          <AitFeature Name="{9fd11377-c12a-4493-bf7d-f3a8ad74b554}" />
+          <AitFeature Name="{a003f58a-29ab-4817-b884-d7516dad18b9}" />
+          <AitFeature Name="{a06798b7-a2ec-415f-ade2-eade9333f2c7}" />
+          <AitFeature Name="{a26dd1dc-cd44-435c-be94-01d6241c231c}" />
+          <AitFeature Name="{a3219ecb-f0b3-4dcd-beee-19d48cd3ed1e}" />
+          <AitFeature Name="{a38ed2cf-13de-4299-ade2-ae18f74ed353}" />
+          <AitFeature Name="{a391d09b-4a99-4b7c-9d8d-6fa5d01f6fbf}" />
+          <AitFeature Name="{a3ec0774-55ac-5d61-8232-b35c5d35c93c}" />
+          <AitFeature Name="{a44a9299-e321-40de-8866-341b41669162}" />
+          <AitFeature Name="{a4ed5c81-76c9-40bd-8be6-b1d90fb20ae7}" />
+          <AitFeature Name="{a50a4bbd-8361-469c-90da-e9a40c7474df}" />
+          <AitFeature Name="{a5e83e40-b597-5b83-92f5-5bed3926ca80}" />
+          <AitFeature Name="{a68ef02d-45ba-4e50-8cad-aaea3a227af5}" />
+          <AitFeature Name="{a856e674-b0b6-4bc3-bba8-1ba06e40d4b5}" />
+          <AitFeature Name="{a8912263-2951-4f58-a9c5-5a134eaa7f07}" />
+          <AitFeature Name="{ac144aa4-b4f1-4db6-b206-8a22c308db0a}" />
+          <AitFeature Name="{ac7f26f2-feb7-5b2a-8ac4-345bc62caede}" />
+          <AitFeature Name="{ae2d9271-3b4a-45fc-8468-f7949548f4d5}" />
+          <AitFeature Name="{ae752c89-0067-4963-bf4c-29db0c4a507e}" />
+          <AitFeature Name="{af86e2e0-b12d-4c6a-9c5a-d7aa65101e90}" />
+          <AitFeature Name="{b3765d69-68a5-4b32-8861-fdb90c1f5836}" />
+          <AitFeature Name="{b6a5c8e4-6e3c-5c37-92cf-cf9f1c383335}" />
+          <AitFeature Name="{b79a741f-7fb5-50ae-9e99-911201ec3d41}" />
+          <AitFeature Name="{b8ae8fe2-d641-4fd7-80b4-7439207d2798}" />
+          <AitFeature Name="{c1d3d1a2-ae17-5a5f-b5a2-bdcc8844889a}" />
+          <AitFeature Name="{c2fdd1f8-7105-4a74-a109-de29dff56b98}" />
+          <AitFeature Name="{c50898f6-c536-5f47-8583-8b2c2438a13b}" />
+          <AitFeature Name="{c541f58c-43a9-4216-b718-e0b11b14e93e}" />
+          <AitFeature Name="{c9d9a725-786b-5113-b4b7-9b61764c220b}" />
+          <AitFeature Name="{ca30221d-86d9-40fb-a26b-d44eb7cf08ea}" />
+          <AitFeature Name="{cb4206c5-0988-5104-afa9-253c298f86fd}" />
+          <AitFeature Name="{cb6c396f-4861-5296-b14b-bd90b941a3e0}" />
+          <AitFeature Name="{cb72d686-9516-520d-a274-fa4cd1762cb2}" />
+          <AitFeature Name="{cc254827-4b3d-438f-9232-10c76bc7e038}" />
+          <AitFeature Name="{ccebaca3-3b5c-4f4c-9bfd-86887bc79772}" />
+          <AitFeature Name="{cded76fd-7841-52a0-a771-76cd751d13cd}" />
+          <AitFeature Name="{d160ce46-cd22-4f5f-8c97-40e61da3e2dc}" />
+          <AitFeature Name="{d1f276c4-98d8-4636-bf49-eb79507548e9}" />
+          <AitFeature Name="{d26b2819-897f-5c7d-84d6-56d796561431}" />
+          <AitFeature Name="{d44662bc-dce3-59a8-9272-4b210f33908b}" />
+          <AitFeature Name="{d45c1e6e-3594-460e-981a-32271bd3aa06}" />
+          <AitFeature Name="{d481759e-3eff-4462-823d-fd52f9ba4cc8}" />
+          <AitFeature Name="{da007e54-b3c2-4b9a-aa8e-d3f071262b97}" />
+          <AitFeature Name="{dd9ff16a-4b62-4a6c-a49d-0671ef6136be}" />
+          <AitFeature Name="{e2663f37-2e1b-500c-ad68-c3ed7a8f74c8}" />
+          <AitFeature Name="{e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e}" />
+          <AitFeature Name="{e521c894-2c26-5946-9e61-2b5e188d01ed}" />
+          <AitFeature Name="{e5d37dc0-552a-4d52-9cc0-a14d546fbd04}" />
+          <AitFeature Name="{e9bdaaf0-cbf6-5c72-be90-29cbf3a1319b}" />
+          <AitFeature Name="{ef60385f-be78-584b-aaef-7829ada2b0de}" />
+          <AitFeature Name="{f6d1f700-49c2-52ae-8154-826f9908773c}" />
+          <AitFeature Name="{f6ed9226-b260-5f49-9b84-e89e43cbabc6}" />
+          <AitFeature Name="{f7f3a506-1e87-42d6-bcfb-b8c809fa5494}" />
+          <AitFeature Name="{fa002c1a-494e-46cf-91d4-e14a8d798674}" />
+          <AitFeature Name="{fd53da65-b186-4654-bfdb-180ed26cad07}" />
+          <AitFeature Name="{fe1eb536-7e7f-4f90-ac9a-474984aae512}" />
+          <AitFeature Name="{fe2f3d47-5d47-5499-8374-430c7cda0204}" />
+        </AitCategory>
+        <AitCategory Id="ApiStatic">
+          <AitFeature Name="api-ms-win-core-handle-l1-1-0.dll!CloseHandle" />
+          <AitFeature Name="api-ms-win-core-profile-l1-1-0.dll!QueryPerformanceCounter" />
+          <AitFeature Name="api-ms-win-core-profile-l1-1-0.dll!QueryPerformanceFrequency" />
+          <AitFeature Name="api-ms-win-core-winrt-string-l1-1-0.dll!WindowsCompareStringOrdinal" />
+          <AitFeature Name="api-ms-win-core-winrt-string-l1-1-0.dll!WindowsConcatString" />
+          <AitFeature Name="api-ms-win-core-winrt-string-l1-1-0.dll!WindowsCreateString" />
+          <AitFeature Name="api-ms-win-core-winrt-string-l1-1-0.dll!WindowsCreateStringReference" />
+          <AitFeature Name="api-ms-win-core-winrt-string-l1-1-0.dll!WindowsDeleteString" />
+          <AitFeature Name="api-ms-win-core-winrt-string-l1-1-0.dll!WindowsDuplicateString" />
+          <AitFeature Name="api-ms-win-core-winrt-string-l1-1-0.dll!WindowsGetStringLen" />
+          <AitFeature Name="api-ms-win-core-winrt-string-l1-1-0.dll!WindowsGetStringRawBuffer" />
+          <AitFeature Name="api-ms-win-core-winrt-string-l1-1-0.dll!WindowsIsStringEmpty" />
+          <AitFeature Name="api-ms-win-core-util-l1-1-0.dll!DecodePointer" />
+          <AitFeature Name="api-ms-win-core-util-l1-1-0.dll!EncodePointer" />
+          <AitFeature Name="api-ms-win-core-winrt-error-l1-1-0.dll!RoFailFastWithErrorContext" />
+          <AitFeature Name="api-ms-win-core-winrt-error-l1-1-0.dll!SetRestrictedErrorInfo" />
+          <AitFeature Name="api-ms-win-core-synch-l1-2-0.dll!AcquireSRWLockExclusive" />
+          <AitFeature Name="api-ms-win-core-synch-l1-2-0.dll!CreateEventExW" />
+          <AitFeature Name="api-ms-win-core-synch-l1-2-0.dll!CreateMutexExW" />
+          <AitFeature Name="api-ms-win-core-synch-l1-2-0.dll!ReleaseMutex" />
+          <AitFeature Name="api-ms-win-core-synch-l1-2-0.dll!ReleaseSRWLockExclusive" />
+          <AitFeature Name="api-ms-win-core-synch-l1-2-0.dll!SetEvent" />
+          <AitFeature Name="api-ms-win-core-synch-l1-2-0.dll!WaitForSingleObjectEx" />
+          <AitFeature Name="api-ms-win-core-libraryloader-l1-2-0.dll!DisableThreadLibraryCalls" />
+          <AitFeature Name="api-ms-win-core-debug-l1-1-1.dll!OutputDebugStringW" />
+          <AitFeature Name="api-ms-win-core-com-l1-1-1.dll!CoCreateFreeThreadedMarshaler" />
+          <AitFeature Name="api-ms-win-core-com-l1-1-1.dll!CoCreateGuid" />
+          <AitFeature Name="api-ms-win-core-com-l1-1-1.dll!CoCreateInstanceFromApp" />
+          <AitFeature Name="api-ms-win-core-com-l1-1-1.dll!CoGetApartmentType" />
+          <AitFeature Name="api-ms-win-core-com-l1-1-1.dll!CoGetContextToken" />
+          <AitFeature Name="api-ms-win-core-com-l1-1-1.dll!CoGetObjectContext" />
+          <AitFeature Name="api-ms-win-core-com-l1-1-1.dll!CoTaskMemAlloc" />
+          <AitFeature Name="api-ms-win-core-com-l1-1-1.dll!CoTaskMemFree" />
+          <AitFeature Name="api-ms-win-core-com-l1-1-1.dll!CreateStreamOnHGlobal" />
+          <AitFeature Name="api-ms-win-core-winrt-error-l1-1-1.dll!RoReportUnhandledError" />
+          <AitFeature Name="api-ms-win-core-sysinfo-l1-2-1.dll!GetSystemTimeAsFileTime" />
+          <AitFeature Name="api-ms-win-core-sysinfo-l1-2-1.dll!GetTickCount64" />
+          <AitFeature Name="api-ms-win-core-processthreads-l1-1-2.dll!GetCurrentProcessId" />
+          <AitFeature Name="api-ms-win-core-processthreads-l1-1-2.dll!GetCurrentThreadId" />
+          <AitFeature Name="xmllite.dll!CreateXmlReader" />
+          <AitFeature Name="vccorlib120_app.dll!??0ChangedStateException@Platform@@Q$AAA@XZ" />
+          <AitFeature Name="vccorlib120_app.dll!??0Delegate@Platform@@Q$AAA@XZ" />
+          <AitFeature Name="vccorlib120_app.dll!??0DisconnectedException@Platform@@Q$AAA@XZ" />
+          <AitFeature Name="vccorlib120_app.dll!??0Exception@Platform@@Q$AAA@HP$AAVString@1@@Z" />
+          <AitFeature Name="vccorlib120_app.dll!??0FailureException@Platform@@Q$AAA@XZ" />
+          <AitFeature Name="vccorlib120_app.dll!??0InvalidArgumentException@Platform@@Q$AAA@P$AAVString@1@@Z" />
+          <AitFeature Name="vccorlib120_app.dll!??0NotImplementedException@Platform@@Q$AAA@XZ" />
+          <AitFeature Name="vccorlib120_app.dll!??0NullReferenceException@Platform@@Q$AAA@XZ" />
+          <AitFeature Name="vccorlib120_app.dll!??0Object@Platform@@Q$AAA@XZ" />
+          <AitFeature Name="vccorlib120_app.dll!??0OutOfBoundsException@Platform@@Q$AAA@XZ" />
+          <AitFeature Name="vccorlib120_app.dll!??0OutOfMemoryException@Platform@@Q$AAA@XZ" />
+          <AitFeature Name="vccorlib120_app.dll!??BType@Platform@@SA?AVTypeName@Interop@Xaml@UI@Windows@@P$AAV01@@Z" />
+          <AitFeature Name="vccorlib120_app.dll!?AlignedFree@Heap@Details@Platform@@SAXPAX@Z" />
+          <AitFeature Name="vccorlib120_app.dll!?Allocate@Heap@Details@Platform@@SAPAXI@Z" />
+          <AitFeature Name="vccorlib120_app.dll!?Allocate@Heap@Details@Platform@@SAPAXII@Z" />
+          <AitFeature Name="vccorlib120_app.dll!?AllocateException@Heap@Details@Platform@@SAPAXII@Z" />
+          <AitFeature Name="vccorlib120_app.dll!?CreateException@Exception@Platform@@SAP$AAV12@H@Z" />
+          <AitFeature Name="vccorlib120_app.dll!?CreateValue@Details@Platform@@YAP$AAVObject@2@W4TypeCode@2@PBX@Z" />
+          <AitFeature Name="vccorlib120_app.dll!?Equals@ValueType@Platform@@Q$AAA_NP$AAVObject@2@@Z" />
+          <AitFeature Name="vccorlib120_app.dll!?EventSourceAdd@Details@Platform@@YA?AVEventRegistrationToken@Foundation@Windows@@PAPAXPAUEventLock@12@P$AAVDelegate@2@@Z" />
+          <AitFeature Name="vccorlib120_app.dll!?EventSourceGetTargetArray@Details@Platform@@YAPAXPAXPAUEventLock@12@@Z" />
+          <AitFeature Name="vccorlib120_app.dll!?EventSourceGetTargetArrayEvent@Details@Platform@@YAPAXPAXIPBXPA_J@Z" />
+          <AitFeature Name="vccorlib120_app.dll!?EventSourceGetTargetArraySize@Details@Platform@@YAIPAX@Z" />
+          <AitFeature Name="vccorlib120_app.dll!?EventSourceInitialize@Details@Platform@@YAXPAPAX@Z" />
+          <AitFeature Name="vccorlib120_app.dll!?EventSourceRemove@Details@Platform@@YAXPAPAXPAUEventLock@12@VEventRegistrationToken@Foundation@Windows@@@Z" />
+          <AitFeature Name="vccorlib120_app.dll!?EventSourceUninitialize@Details@Platform@@YAXPAPAX@Z" />
+          <AitFeature Name="vccorlib120_app.dll!?Free@Heap@Details@Platform@@SAXPAX@Z" />
+          <AitFeature Name="vccorlib120_app.dll!?GetActivationFactory@Details@Platform@@YAJPAVModuleBase@1WRL@Microsoft@@PAUHSTRING__@@PAPAUIActivationFactory@@@Z" />
+          <AitFeature Name="vccorlib120_app.dll!?GetActivationFactoryByPCWSTR@@YAJPAXAAVGuid@Platform@@PAPAX@Z" />
+          <AitFeature Name="vccorlib120_app.dll!?GetIBoxArrayVtable@Details@Platform@@YAPAXPAX@Z" />
+          <AitFeature Name="vccorlib120_app.dll!?GetIBoxVtable@Details@Platform@@YAPAXPAX@Z" />
+          <AitFeature Name="vccorlib120_app.dll!?GetIidsFn@@YAJHPAKPBU__s_GUID@@PAPAVGuid@Platform@@@Z" />
+          <AitFeature Name="vccorlib120_app.dll!?GetObjectContext@Details@Platform@@YAPAUIUnknown@@XZ" />
+          <AitFeature Name="vccorlib120_app.dll!?GetProxyImpl@Details@Platform@@YAJPAUIUnknown@@ABU_GUID@@0PAPAU3@@Z" />
+          <AitFeature Name="vccorlib120_app.dll!?GetTypeCode@Type@Platform@@SA?AW4TypeCode@2@P$AAV12@@Z" />
+          <AitFeature Name="vccorlib120_app.dll!?GetWeakReference@Details@Platform@@YAPAU__abi_IUnknown@@Q$ADVObject@2@@Z" />
+          <AitFeature Name="vccorlib120_app.dll!?InitializeData@Details@Platform@@YAJH@Z" />
+          <AitFeature Name="vccorlib120_app.dll!?ReCreateException@Exception@Platform@@SAP$AAV12@H@Z" />
+          <AitFeature Name="vccorlib120_app.dll!?ReleaseInContextImpl@Details@Platform@@YAJPAUIUnknown@@0@Z" />
+          <AitFeature Name="vccorlib120_app.dll!?ReleaseTarget@ControlBlock@Details@Platform@@AAAXXZ" />
+          <AitFeature Name="vccorlib120_app.dll!?ResolveWeakReference@Details@Platform@@YAP$AAVObject@2@ABU_GUID@@PAPAU__abi_IUnknown@@@Z" />
+          <AitFeature Name="vccorlib120_app.dll!?TerminateModule@Details@Platform@@YA_NPAVModuleBase@1WRL@Microsoft@@@Z" />
+          <AitFeature Name="vccorlib120_app.dll!?ToString@Boolean@Platform@@QAAP$AAVString@2@XZ" />
+          <AitFeature Name="vccorlib120_app.dll!?ToString@Enum@Platform@@Q$AAAP$AAVString@2@XZ" />
+          <AitFeature Name="vccorlib120_app.dll!?ToString@Guid@Platform@@QAAP$AAVString@2@XZ" />
+          <AitFeature Name="vccorlib120_app.dll!?ToString@float32@default@@QAAP$AAVString@Platform@@XZ" />
+          <AitFeature Name="vccorlib120_app.dll!?ToString@float64@default@@QAAP$AAVString@Platform@@XZ" />
+          <AitFeature Name="vccorlib120_app.dll!?ToString@int32@default@@QAAP$AAVString@Platform@@XZ" />
+          <AitFeature Name="vccorlib120_app.dll!?UninitializeData@Details@Platform@@YAXH@Z" />
+          <AitFeature Name="vccorlib120_app.dll!?__abi_ObjectToString@__abi_details@@YAP$AAVString@Platform@@P$AAVObject@3@_N@Z" />
+          <AitFeature Name="vccorlib120_app.dll!?__abi_WinRTraiseAccessDeniedException@@YAXXZ" />
+          <AitFeature Name="vccorlib120_app.dll!?__abi_WinRTraiseCOMException@@YAXJ@Z" />
+          <AitFeature Name="vccorlib120_app.dll!?__abi_WinRTraiseChangedStateException@@YAXXZ" />
+          <AitFeature Name="vccorlib120_app.dll!?__abi_WinRTraiseClassNotRegisteredException@@YAXXZ" />
+          <AitFeature Name="vccorlib120_app.dll!?__abi_WinRTraiseDisconnectedException@@YAXXZ" />
+          <AitFeature Name="vccorlib120_app.dll!?__abi_WinRTraiseFailureException@@YAXXZ" />
+          <AitFeature Name="vccorlib120_app.dll!?__abi_WinRTraiseInvalidArgumentException@@YAXXZ" />
+          <AitFeature Name="vccorlib120_app.dll!?__abi_WinRTraiseInvalidCastException@@YAXXZ" />
+          <AitFeature Name="vccorlib120_app.dll!?__abi_WinRTraiseNotImplementedException@@YAXXZ" />
+          <AitFeature Name="vccorlib120_app.dll!?__abi_WinRTraiseNullReferenceException@@YAXXZ" />
+          <AitFeature Name="vccorlib120_app.dll!?__abi_WinRTraiseObjectDisposedException@@YAXXZ" />
+          <AitFeature Name="vccorlib120_app.dll!?__abi_WinRTraiseOperationCanceledException@@YAXXZ" />
+          <AitFeature Name="vccorlib120_app.dll!?__abi_WinRTraiseOutOfBoundsException@@YAXXZ" />
+          <AitFeature Name="vccorlib120_app.dll!?__abi_WinRTraiseOutOfMemoryException@@YAXXZ" />
+          <AitFeature Name="vccorlib120_app.dll!?__abi_WinRTraiseWrongThreadException@@YAXXZ" />
+          <AitFeature Name="vccorlib120_app.dll!?__abi_cast_Object_to_String@__abi_details@@YAP$AAVString@Platform@@_NP$AAVObject@3@@Z" />
+          <AitFeature Name="vccorlib120_app.dll!?__abi_cast_String_to_Object@__abi_details@@YAP$AAVObject@Platform@@P$AAVString@3@@Z" />
+          <AitFeature Name="vccorlib120_app.dll!?__abi_make_type_id@@YAP$AAVType@Platform@@ABU__abi_type_descriptor@@@Z" />
+          <AitFeature Name="vccorlib120_app.dll!?__abi_translateCurrentException@@YAJ_N@Z" />
+          <AitFeature Name="vccorlib120_app.dll!?get@FullName@Type@Platform@@Q$AAAP$AAVString@3@XZ" />
+          <AitFeature Name="vccorlib120_app.dll!?get@Message@Exception@Platform@@Q$AAAP$AAVString@3@XZ" />
+          <AitFeature Name="msvcp120_app.dll!??0?$basic_ios@_WU?$char_traits@_W@std@@@std@@IAA@XZ" />
+          <AitFeature Name="msvcp120_app.dll!??0?$basic_iostream@_WU?$char_traits@_W@std@@@std@@QAA@PAV?$basic_streambuf@_WU?$char_traits@_W@std@@@1@@Z" />
+          <AitFeature Name="msvcp120_app.dll!??0?$basic_ostream@DU?$char_traits@D@std@@@std@@QAA@PAV?$basic_streambuf@DU?$char_traits@D@std@@@1@_N@Z" />
+          <AitFeature Name="msvcp120_app.dll!??0?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@IAA@XZ" />
+          <AitFeature Name="msvcp120_app.dll!??0?$codecvt@_WDH@std@@QAA@I@Z" />
+          <AitFeature Name="msvcp120_app.dll!??0_Locinfo@std@@QAA@PBD@Z" />
+          <AitFeature Name="msvcp120_app.dll!??0_Lockit@std@@QAA@H@Z" />
+          <AitFeature Name="msvcp120_app.dll!??0_Pad@std@@QAA@XZ" />
+          <AitFeature Name="msvcp120_app.dll!??0facet@locale@std@@IAA@I@Z" />
+          <AitFeature Name="msvcp120_app.dll!??1?$basic_ios@_WU?$char_traits@_W@std@@@std@@UAA@XZ" />
+          <AitFeature Name="msvcp120_app.dll!??1?$basic_iostream@_WU?$char_traits@_W@std@@@std@@UAA@XZ" />
+          <AitFeature Name="msvcp120_app.dll!??1?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@UAA@XZ" />
+          <AitFeature Name="msvcp120_app.dll!??1_Locinfo@std@@QAA@XZ" />
+          <AitFeature Name="msvcp120_app.dll!??1_Lockit@std@@QAA@XZ" />
+          <AitFeature Name="msvcp120_app.dll!??1_Pad@std@@QAA@XZ" />
+          <AitFeature Name="msvcp120_app.dll!??1facet@locale@std@@MAA@XZ" />
+          <AitFeature Name="msvcp120_app.dll!??4?$_Yarn@D@std@@QAAAAV01@PBD@Z" />
+          <AitFeature Name="msvcp120_app.dll!??5?$basic_istream@_WU?$char_traits@_W@std@@@std@@QAAAAV01@AA_J@Z" />
+          <AitFeature Name="msvcp120_app.dll!??5?$basic_istream@_WU?$char_traits@_W@std@@@std@@QAAAAV01@AA_N@Z" />
+          <AitFeature Name="msvcp120_app.dll!??5?$basic_istream@_WU?$char_traits@_W@std@@@std@@QAAAAV01@P6AAAVios_base@1@AAV21@@Z@Z" />
+          <AitFeature Name="msvcp120_app.dll!??6?$basic_ostream@_WU?$char_traits@_W@std@@@std@@QAAAAV01@I@Z" />
+          <AitFeature Name="msvcp120_app.dll!??6?$basic_ostream@_WU?$char_traits@_W@std@@@std@@QAAAAV01@J@Z" />
+          <AitFeature Name="msvcp120_app.dll!??6?$basic_ostream@_WU?$char_traits@_W@std@@@std@@QAAAAV01@P6AAAV01@AAV01@@Z@Z" />
+          <AitFeature Name="msvcp120_app.dll!??6?$basic_ostream@_WU?$char_traits@_W@std@@@std@@QAAAAV01@P6AAAVios_base@1@AAV21@@Z@Z" />
+          <AitFeature Name="msvcp120_app.dll!??6?$basic_ostream@_WU?$char_traits@_W@std@@@std@@QAAAAV01@_J@Z" />
+          <AitFeature Name="msvcp120_app.dll!??6?$basic_ostream@_WU?$char_traits@_W@std@@@std@@QAAAAV01@_N@Z" />
+          <AitFeature Name="msvcp120_app.dll!??Bid@locale@std@@QAAIXZ" />
+          <AitFeature Name="msvcp120_app.dll!??_7?$codecvt@_WDH@std@@6B@" />
+          <AitFeature Name="msvcp120_app.dll!??_7_Facet_base@std@@6B@" />
+          <AitFeature Name="msvcp120_app.dll!??_7codecvt_base@std@@6B@" />
+          <AitFeature Name="msvcp120_app.dll!??_7facet@locale@std@@6B@" />
+          <AitFeature Name="msvcp120_app.dll!??_D?$basic_ostream@DU?$char_traits@D@std@@@std@@QAAXXZ" />
+          <AitFeature Name="msvcp120_app.dll!?GetNextAsyncId@platform@details@Concurrency@@YAIXZ" />
+          <AitFeature Name="msvcp120_app.dll!?_Addfac@_Locimp@locale@std@@AAAXPAVfacet@23@I@Z" />
+          <AitFeature Name="msvcp120_app.dll!?_BADOFF@std@@3_JB" />
+          <AitFeature Name="msvcp120_app.dll!?_Decref@facet@locale@std@@UAAPAV_Facet_base@3@XZ" />
+          <AitFeature Name="msvcp120_app.dll!?_Getcat@?$codecvt@_WDH@std@@SAIPAPBVfacet@locale@2@PBV42@@Z" />
+          <AitFeature Name="msvcp120_app.dll!?_Getcat@?$ctype@_W@std@@SAIPAPBVfacet@locale@2@PBV42@@Z" />
+          <AitFeature Name="msvcp120_app.dll!?_Getcvt@_Locinfo@std@@QBA?AU_Cvtvec@@XZ" />
+          <AitFeature Name="msvcp120_app.dll!?_Getfalse@_Locinfo@std@@QBAPBDXZ" />
+          <AitFeature Name="msvcp120_app.dll!?_Getgloballocale@locale@std@@CAPAV_Locimp@12@XZ" />
+          <AitFeature Name="msvcp120_app.dll!?_Gettrue@_Locinfo@std@@QBAPBDXZ" />
+          <AitFeature Name="msvcp120_app.dll!?_Incref@facet@locale@std@@UAAXXZ" />
+          <AitFeature Name="msvcp120_app.dll!?_Init@locale@std@@CAPAV_Locimp@12@_N@Z" />
+          <AitFeature Name="msvcp120_app.dll!?_Ipfx@?$basic_istream@_WU?$char_traits@_W@std@@@std@@QAA_N_N@Z" />
+          <AitFeature Name="msvcp120_app.dll!?_Launch@_Pad@std@@QAAXPAU_Thrd_imp_t@@@Z" />
+          <AitFeature Name="msvcp120_app.dll!?_Lock@?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@UAAXXZ" />
+          <AitFeature Name="msvcp120_app.dll!?_New_Locimp@_Locimp@locale@std@@CAPAV123@ABV123@@Z" />
+          <AitFeature Name="msvcp120_app.dll!?_Osfx@?$basic_ostream@_WU?$char_traits@_W@std@@@std@@QAAXXZ" />
+          <AitFeature Name="msvcp120_app.dll!?_Pninc@?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@IAAPA_WXZ" />
+          <AitFeature Name="msvcp120_app.dll!?_Release@_Pad@std@@QAAXXZ" />
+          <AitFeature Name="msvcp120_app.dll!?_Syserror_map@std@@YAPBDH@Z" />
+          <AitFeature Name="msvcp120_app.dll!?_Throw_C_error@std@@YAXH@Z" />
+          <AitFeature Name="msvcp120_app.dll!?_Throw_Cpp_error@std@@YAXH@Z" />
+          <AitFeature Name="msvcp120_app.dll!?_Unlock@?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@UAAXXZ" />
+          <AitFeature Name="msvcp120_app.dll!?_Winerror_map@std@@YAPBDH@Z" />
+          <AitFeature Name="msvcp120_app.dll!?_Xbad_alloc@std@@YAXXZ" />
+          <AitFeature Name="msvcp120_app.dll!?_Xbad_function_call@std@@YAXXZ" />
+          <AitFeature Name="msvcp120_app.dll!?_Xinvalid_argument@std@@YAXPBD@Z" />
+          <AitFeature Name="msvcp120_app.dll!?_Xlength_error@std@@YAXPBD@Z" />
+          <AitFeature Name="msvcp120_app.dll!?_Xout_of_range@std@@YAXPBD@Z" />
+          <AitFeature Name="msvcp120_app.dll!?flush@?$basic_ostream@_WU?$char_traits@_W@std@@@std@@QAAAAV12@XZ" />
+          <AitFeature Name="msvcp120_app.dll!?getloc@ios_base@std@@QBA?AVlocale@2@XZ" />
+          <AitFeature Name="msvcp120_app.dll!?id@?$codecvt@_WDH@std@@2V0locale@2@A" />
+          <AitFeature Name="msvcp120_app.dll!?id@?$ctype@_W@std@@2V0locale@2@A" />
+          <AitFeature Name="msvcp120_app.dll!?id@?$numpunct@_W@std@@2V0locale@2@A" />
+          <AitFeature Name="msvcp120_app.dll!?imbue@?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@MAAXABVlocale@2@@Z" />
+          <AitFeature Name="msvcp120_app.dll!?in@?$codecvt@_WDH@std@@QBAHAAHPBD1AAPBDPA_W3AAPA_W@Z" />
+          <AitFeature Name="msvcp120_app.dll!?is_current_task_group_canceling@Concurrency@@YA_NXZ" />
+          <AitFeature Name="msvcp120_app.dll!?put@?$basic_ostream@_WU?$char_traits@_W@std@@@std@@QAAAAV12@_W@Z" />
+          <AitFeature Name="msvcp120_app.dll!?sbumpc@?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@QAAGXZ" />
+          <AitFeature Name="msvcp120_app.dll!?setbuf@?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@MAAPAV12@PA_W_J@Z" />
+          <AitFeature Name="msvcp120_app.dll!?setg@?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@IAAXPA_W00@Z" />
+          <AitFeature Name="msvcp120_app.dll!?setp@?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@IAAXPA_W0@Z" />
+          <AitFeature Name="msvcp120_app.dll!?setstate@?$basic_ios@_WU?$char_traits@_W@std@@@std@@QAAXH_N@Z" />
+          <AitFeature Name="msvcp120_app.dll!?sgetc@?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@QAAGXZ" />
+          <AitFeature Name="msvcp120_app.dll!?showmanyc@?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@MAA_JXZ" />
+          <AitFeature Name="msvcp120_app.dll!?snextc@?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@QAAGXZ" />
+          <AitFeature Name="msvcp120_app.dll!?sputc@?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@QAAG_W@Z" />
+          <AitFeature Name="msvcp120_app.dll!?sputn@?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@QAA_JPB_W_J@Z" />
+          <AitFeature Name="msvcp120_app.dll!?sync@?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@MAAHXZ" />
+          <AitFeature Name="msvcp120_app.dll!?uflow@?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@MAAGXZ" />
+          <AitFeature Name="msvcp120_app.dll!?uncaught_exception@std@@YA_NXZ" />
+          <AitFeature Name="msvcp120_app.dll!?widen@?$basic_ios@_WU?$char_traits@_W@std@@@std@@QBA_WD@Z" />
+          <AitFeature Name="msvcp120_app.dll!?widen@?$ctype@_W@std@@QBAPBDPBD0PA_W@Z" />
+          <AitFeature Name="msvcp120_app.dll!?widen@?$ctype@_W@std@@QBA_WD@Z" />
+          <AitFeature Name="msvcp120_app.dll!?xsgetn@?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@MAA_JPA_W_J@Z" />
+          <AitFeature Name="msvcp120_app.dll!?xsputn@?$basic_streambuf@_WU?$char_traits@_W@std@@@std@@MAA_JPB_W_J@Z" />
+          <AitFeature Name="msvcp120_app.dll!_Cnd_destroy" />
+          <AitFeature Name="msvcp120_app.dll!_Cnd_init" />
+          <AitFeature Name="msvcp120_app.dll!_Cnd_signal" />
+          <AitFeature Name="msvcp120_app.dll!_Cnd_timedwait" />
+          <AitFeature Name="msvcp120_app.dll!_Mbrtowc" />
+          <AitFeature Name="msvcp120_app.dll!_Mtx_current_owns" />
+          <AitFeature Name="msvcp120_app.dll!_Mtx_destroy" />
+          <AitFeature Name="msvcp120_app.dll!_Mtx_init" />
+          <AitFeature Name="msvcp120_app.dll!_Mtx_lock" />
+          <AitFeature Name="msvcp120_app.dll!_Mtx_unlock" />
+          <AitFeature Name="msvcp120_app.dll!_Thrd_detach" />
+          <AitFeature Name="msvcp120_app.dll!_Thrd_sleep" />
+          <AitFeature Name="msvcp120_app.dll!_Xtime_diff_to_millis2" />
+          <AitFeature Name="msvcp120_app.dll!_Xtime_get_ticks" />
+          <AitFeature Name="msvcp120_app.dll!xtime_get" />
+          <AitFeature Name="msvcr120_app.dll!??0bad_cast@std@@QAA@ABV01@@Z" />
+          <AitFeature Name="msvcr120_app.dll!??0bad_cast@std@@QAA@PBD@Z" />
+          <AitFeature Name="msvcr120_app.dll!??0critical_section@Concurrency@@QAA@XZ" />
+          <AitFeature Name="msvcr120_app.dll!??0event@Concurrency@@QAA@XZ" />
+          <AitFeature Name="msvcr120_app.dll!??0exception@std@@QAA@ABQBD@Z" />
+          <AitFeature Name="msvcr120_app.dll!??0exception@std@@QAA@ABQBDH@Z" />
+          <AitFeature Name="msvcr120_app.dll!??0exception@std@@QAA@ABV01@@Z" />
+          <AitFeature Name="msvcr120_app.dll!??0exception@std@@QAA@XZ" />
+          <AitFeature Name="msvcr120_app.dll!??0invalid_operation@Concurrency@@QAA@PBD@Z" />
+          <AitFeature Name="msvcr120_app.dll!??0invalid_operation@Concurrency@@QAA@XZ" />
+          <AitFeature Name="msvcr120_app.dll!??0scoped_lock@critical_section@Concurrency@@QAA@AAV12@@Z" />
+          <AitFeature Name="msvcr120_app.dll!??0task_canceled@Concurrency@@QAA@XZ" />
+          <AitFeature Name="msvcr120_app.dll!??1bad_cast@std@@UAA@XZ" />
+          <AitFeature Name="msvcr120_app.dll!??1critical_section@Concurrency@@QAA@XZ" />
+          <AitFeature Name="msvcr120_app.dll!??1event@Concurrency@@QAA@XZ" />
+          <AitFeature Name="msvcr120_app.dll!??1exception@std@@UAA@XZ" />
+          <AitFeature Name="msvcr120_app.dll!??1scoped_lock@critical_section@Concurrency@@QAA@XZ" />
+          <AitFeature Name="msvcr120_app.dll!??1type_info@@UAA@XZ" />
+          <AitFeature Name="msvcr120_app.dll!??2@YAPAXI@Z" />
+          <AitFeature Name="msvcr120_app.dll!??3@YAXPAX@Z" />
+          <AitFeature Name="msvcr120_app.dll!??4exception@std@@QAAAAV01@ABV01@@Z" />
+          <AitFeature Name="msvcr120_app.dll!??_V@YAXPAX@Z" />
+          <AitFeature Name="msvcr120_app.dll!?Alloc@Concurrency@@YAPAXI@Z" />
+          <AitFeature Name="msvcr120_app.dll!?Free@Concurrency@@YAXPAX@Z" />
+          <AitFeature Name="msvcr120_app.dll!?GetCurrentThreadId@platform@details@Concurrency@@YAJXZ" />
+          <AitFeature Name="msvcr120_app.dll!?_Cancel@_TaskCollection@details@Concurrency@@QAAXXZ" />
+          <AitFeature Name="msvcr120_app.dll!?_GetCurrentInlineDepth@_StackGuard@details@Concurrency@@CAAAIXZ" />
+          <AitFeature Name="msvcr120_app.dll!?_Id@_CurrentScheduler@details@Concurrency@@SAIXZ" />
+          <AitFeature Name="msvcr120_app.dll!?_NewCollection@_AsyncTaskCollection@details@Concurrency@@SAPAV123@PAV_CancellationTokenState@23@@Z" />
+          <AitFeature Name="msvcr120_app.dll!?_Oversubscribe@_Context@details@Concurrency@@SAX_N@Z" />
+          <AitFeature Name="msvcr120_app.dll!?_ReportUnobservedException@details@Concurrency@@YAXXZ" />
+          <AitFeature Name="msvcr120_app.dll!?_RunAndWait@_TaskCollection@details@Concurrency@@QAA?AW4_TaskCollectionStatus@23@PAV_UnrealizedChore@23@@Z" />
+          <AitFeature Name="msvcr120_app.dll!?_Schedule@_TaskCollection@details@Concurrency@@QAAXPAV_UnrealizedChore@23@@Z" />
+          <AitFeature Name="msvcr120_app.dll!?_ScheduleTask@_CurrentScheduler@details@Concurrency@@SAXP6AXPAX@Z0@Z" />
+          <AitFeature Name="msvcr120_app.dll!?__ExceptionPtrCopy@@YAXPAXPBX@Z" />
+          <AitFeature Name="msvcr120_app.dll!?__ExceptionPtrCreate@@YAXPAX@Z" />
+          <AitFeature Name="msvcr120_app.dll!?__ExceptionPtrCurrentException@@YAXPAX@Z" />
+          <AitFeature Name="msvcr120_app.dll!?__ExceptionPtrDestroy@@YAXPAX@Z" />
+          <AitFeature Name="msvcr120_app.dll!?__ExceptionPtrRethrow@@YAXPBX@Z" />
+          <AitFeature Name="msvcr120_app.dll!?set@event@Concurrency@@QAAXXZ" />
+          <AitFeature Name="msvcr120_app.dll!?terminate@@YAXXZ" />
+          <AitFeature Name="msvcr120_app.dll!?wait@Concurrency@@YAXI@Z" />
+          <AitFeature Name="msvcr120_app.dll!?wait@event@Concurrency@@QAAII@Z" />
+          <AitFeature Name="msvcr120_app.dll!?what@exception@std@@UBAPBDXZ" />
+          <AitFeature Name="msvcr120_app.dll!_CxxThrowException" />
+          <AitFeature Name="msvcr120_app.dll!__C_specific_handler" />
+          <AitFeature Name="msvcr120_app.dll!__CppXcptFilter" />
+          <AitFeature Name="msvcr120_app.dll!__CxxFrameHandler3" />
+          <AitFeature Name="msvcr120_app.dll!__RTDynamicCast" />
+          <AitFeature Name="msvcr120_app.dll!__clean_type_info_names_internal" />
+          <AitFeature Name="msvcr120_app.dll!__dllonexit" />
+          <AitFeature Name="msvcr120_app.dll!_amsg_exit" />
+          <AitFeature Name="msvcr120_app.dll!_calloc_crt" />
+          <AitFeature Name="msvcr120_app.dll!_errno" />
+          <AitFeature Name="msvcr120_app.dll!_initterm" />
+          <AitFeature Name="msvcr120_app.dll!_initterm_e" />
+          <AitFeature Name="msvcr120_app.dll!_lock" />
+          <AitFeature Name="msvcr120_app.dll!_malloc_crt" />
+          <AitFeature Name="msvcr120_app.dll!_onexit" />
+          <AitFeature Name="msvcr120_app.dll!_purecall" />
+          <AitFeature Name="msvcr120_app.dll!_scwprintf" />
+          <AitFeature Name="msvcr120_app.dll!_unlock" />
+          <AitFeature Name="msvcr120_app.dll!_vswprintf_c_l" />
+          <AitFeature Name="msvcr120_app.dll!_wtoi" />
+          <AitFeature Name="msvcr120_app.dll!free" />
+          <AitFeature Name="msvcr120_app.dll!iswalpha" />
+          <AitFeature Name="msvcr120_app.dll!iswdigit" />
+          <AitFeature Name="msvcr120_app.dll!iswspace" />
+          <AitFeature Name="msvcr120_app.dll!localeconv" />
+          <AitFeature Name="msvcr120_app.dll!malloc" />
+          <AitFeature Name="msvcr120_app.dll!memcpy" />
+          <AitFeature Name="msvcr120_app.dll!memcpy_s" />
+          <AitFeature Name="msvcr120_app.dll!memmove" />
+          <AitFeature Name="msvcr120_app.dll!memset" />
+          <AitFeature Name="msvcr120_app.dll!sprintf_s" />
+          <AitFeature Name="msvcr120_app.dll!strcspn" />
+          <AitFeature Name="msvcr120_app.dll!strlen" />
+          <AitFeature Name="msvcr120_app.dll!swprintf_s" />
+          <AitFeature Name="msvcr120_app.dll!swscanf_s" />
+          <AitFeature Name="msvcr120_app.dll!tolower" />
+          <AitFeature Name="msvcr120_app.dll!towlower" />
+          <AitFeature Name="msvcr120_app.dll!towupper" />
+          <AitFeature Name="msvcr120_app.dll!vswprintf_s" />
+          <AitFeature Name="msvcr120_app.dll!wcscmp" />
+          <AitFeature Name="msvcr120_app.dll!wcslen" />
+          <AitFeature Name="msvcr120_app.dll!wcsrchr" />
+          <AitFeature Name="msvcr120_app.dll!wcstod" />
+          <AitFeature Name="msvcr120_app.dll!wcstol" />
+          <AitFeature Name="msvcr120_app.dll!wctomb_s" />
+        </AitCategory>
+        <AitCategory Id="WRTClassFromSearch">
+          <AitFeature Name="Windows.Foundation.AsyncOperationCompletedHandler`1" />
+          <AitFeature Name="Windows.Foundation.EventHandler`1" />
+          <AitFeature Name="Windows.Foundation.AsyncOperationWithProgressCompletedHandler`2" />
+          <AitFeature Name="Windows.Foundation.TypedEventHandler`2" />
+          <AitFeature Name="Windows.Storage.FileIO" />
+          <AitFeature Name="Windows.Storage.ApplicationData" />
+          <AitFeature Name="Windows.UI.Xaml.PropertyMetadata" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Grid" />
+          <AitFeature Name="Windows.UI.Xaml.Media.Animation.Storyboard" />
+          <AitFeature Name="Windows.ApplicationModel.DesignMode" />
+          <AitFeature Name="Windows.ApplicationModel.Package" />
+          <AitFeature Name="Windows.UI.Xaml.Media.Imaging.BitmapImage" />
+          <AitFeature Name="Windows.UI.Xaml.Shapes.Rectangle" />
+          <AitFeature Name="Windows.Storage.StorageFile" />
+          <AitFeature Name="Windows.UI.Xaml.Shapes.Line" />
+          <AitFeature Name="Windows.UI.Xaml.Shapes.Ellipse" />
+          <AitFeature Name="Windows.Data.Json.JsonValue" />
+          <AitFeature Name="Windows.UI.Xaml.Media.ImageBrush" />
+          <AitFeature Name="Windows.UI.Xaml.Media.SolidColorBrush" />
+          <AitFeature Name="Windows.Foundation.Uri" />
+          <AitFeature Name="Windows.UI.Xaml.PropertyChangedCallback" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.TextBlock" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Control" />
+          <AitFeature Name="Windows.Storage.Streams.InMemoryRandomAccessStream" />
+          <AitFeature Name="Windows.UI.Xaml.Media.Animation.DoubleAnimation" />
+          <AitFeature Name="Windows.Graphics.Display.DisplayInformation" />
+          <AitFeature Name="Windows.UI.Xaml.Markup.XmlnsDefinition" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Button" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.HyperlinkButton" />
+          <AitFeature Name="Windows.ApplicationModel.Store.CurrentApp" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Primitives.Popup" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.ProgressBar" />
+          <AitFeature Name="Windows.Globalization.Calendar" />
+          <AitFeature Name="Windows.Foundation.Diagnostics.AsyncCausalityTracer" />
+          <AitFeature Name="Windows.Storage.Streams.DataReader" />
+          <AitFeature Name="Windows.ApplicationModel.Resources.ResourceLoader" />
+          <AitFeature Name="Windows.Security.Cryptography.Core.HashAlgorithmProvider" />
+          <AitFeature Name="Windows.Storage.Streams.Buffer" />
+          <AitFeature Name="Windows.Security.Cryptography.CryptographicBuffer" />
+          <AitFeature Name="Windows.ApplicationModel.Resources.Core.ResourceManager" />
+          <AitFeature Name="Windows.System.Launcher" />
+          <AitFeature Name="Windows.UI.Xaml.Media.TimelineMarker" />
+          <AitFeature Name="Windows.UI.Core.DispatchedHandler" />
+          <AitFeature Name="Windows.Foundation.AsyncActionCompletedHandler" />
+          <AitFeature Name="Windows.UI.Xaml.SizeChangedEventHandler" />
+          <AitFeature Name="Windows.UI.Xaml.WindowSizeChangedEventHandler" />
+          <AitFeature Name="Windows.Networking.Connectivity.NetworkStatusChangedEventHandler" />
+          <AitFeature Name="Windows.UI.Xaml.WindowVisibilityChangedEventHandler" />
+          <AitFeature Name="Windows.UI.Xaml.Input.TappedEventHandler" />
+          <AitFeature Name="Windows.UI.Xaml.RoutedEventHandler" />
+          <AitFeature Name="Windows.UI.Xaml.ExceptionRoutedEventHandler" />
+          <AitFeature Name="Windows.UI.Xaml.Media.TimelineMarkerRoutedEventHandler" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.NotifyEventHandler" />
+          <AitFeature Name="Windows.UI.Xaml.DispatcherTimer" />
+          <AitFeature Name="Windows.UI.Xaml.Media.VisualTreeHelper" />
+          <AitFeature Name="Windows.UI.Xaml.DurationHelper" />
+          <AitFeature Name="Windows.Devices.Sensors.Inclinometer" />
+          <AitFeature Name="Windows.Devices.Sensors.Accelerometer" />
+          <AitFeature Name="Windows.Globalization.NumberFormatting.DecimalFormatter" />
+          <AitFeature Name="Windows.Security.Authentication.OnlineId.OnlineIdAuthenticator" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Canvas" />
+          <AitFeature Name="Windows.Globalization.ApplicationLanguages" />
+          <AitFeature Name="Windows.Security.Cryptography.Core.HashAlgorithmNames" />
+          <AitFeature Name="Windows.Devices.Sensors.InclinometerReadingChangedEventArgs" />
+          <AitFeature Name="Windows.Devices.Sensors.AccelerometerReadingChangedEventArgs" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.WebViewNavigationCompletedEventArgs" />
+          <AitFeature Name="Windows.UI.Xaml.RoutedEventArgs" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.WebViewNavigationStartingEventArgs" />
+          <AitFeature Name="Windows.UI.Core.KeyEventArgs" />
+          <AitFeature Name="Windows.UI.Colors" />
+          <AitFeature Name="Windows.UI.Text.FontWeights" />
+          <AitFeature Name="Windows.Data.Json.JsonObject" />
+          <AitFeature Name="Windows.Data.Xml.Dom.XmlDocument" />
+          <AitFeature Name="Windows.Foundation.Point" />
+          <AitFeature Name="Windows.Security.Authentication.OnlineId.OnlineIdServiceTicketRequest" />
+          <AitFeature Name="Windows.ApplicationModel.Resources.Core.ResourceContext" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.WebView" />
+          <AitFeature Name="Windows.UI.Xaml.Window" />
+          <AitFeature Name="Windows.UI.Core.CoreWindow" />
+          <AitFeature Name="Windows.Data.Json.JsonArray" />
+          <AitFeature Name="Windows.UI.Xaml.Media.FontFamily" />
+          <AitFeature Name="Windows.Security.Authentication.OnlineId.UserIdentity" />
+          <AitFeature Name="Windows.UI.Xaml.DependencyProperty" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="Ormma.js" Id="00006d49084d74beef36f0d6017caf710f77b3270093">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="document.getElementById" />
+          <AitFeature Name="navigator.appName" />
+          <AitFeature Name="navigator.appVersion" />
+          <AitFeature Name="navigator.platform" />
+          <AitFeature Name="navigator.userAgent" />
+          <AitFeature Name="window.ORMMAReady" />
+          <AitFeature Name="window.external.notify" />
+          <AitFeature Name="window.mraid._isViewable" />
+          <AitFeature Name="window.msAdSDK.notify" />
+          <AitFeature Name="window.ormma._state" />
+          <AitFeature Name="window.ormma.addEventListener" />
+          <AitFeature Name="window.ormma.close" />
+          <AitFeature Name="window.ormma.expand" />
+          <AitFeature Name="window.ormma.getExpandProperties" />
+          <AitFeature Name="window.ormma.getPlacementType" />
+          <AitFeature Name="window.ormma.getScreenSize" />
+          <AitFeature Name="window.ormma.getSize" />
+          <AitFeature Name="window.ormma.open" />
+          <AitFeature Name="window.ormma.removeEventListener" />
+          <AitFeature Name="window.ormma.setExpandProperties" />
+          <AitFeature Name="window.ormma.supports" />
+          <AitFeature Name="window.ormma.useCustomClose" />
+          <AitFeature Name="window.screen.msOrientation" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="Microsoft.AdMediator.Core.dll" Id="00007a8744f2005dd1633b9e61dad94e4888eb93e77d">
+        <AitCategory Id="ApiStatic">
+          <AitFeature Name="mscoree.dll!_CorDllMain" />
+        </AitCategory>
+        <AitCategory Id="DotNet">
+          <AitFeature Name="System.Action" />
+          <AitFeature Name="System.Action..ctor" />
+          <AitFeature Name="System.Action.Invoke" />
+          <AitFeature Name="System.Action`2" />
+          <AitFeature Name="System.Activator" />
+          <AitFeature Name="System.Activator.CreateInstance" />
+          <AitFeature Name="System.AggregateException" />
+          <AitFeature Name="System.AggregateException.Handle" />
+          <AitFeature Name="System.ArgumentException" />
+          <AitFeature Name="System.ArgumentException..ctor" />
+          <AitFeature Name="System.ArgumentNullException" />
+          <AitFeature Name="System.ArgumentNullException..ctor" />
+          <AitFeature Name="System.ArgumentOutOfRangeException" />
+          <AitFeature Name="System.ArgumentOutOfRangeException..ctor" />
+          <AitFeature Name="System.Boolean" />
+          <AitFeature Name="System.CLSCompliantAttribute" />
+          <AitFeature Name="System.CLSCompliantAttribute..ctor" />
+          <AitFeature Name="System.Char" />
+          <AitFeature Name="System.Collections.Generic.Dictionary`2" />
+          <AitFeature Name="System.Collections.Generic.HashSet`1" />
+          <AitFeature Name="System.Collections.Generic.ICollection`1" />
+          <AitFeature Name="System.Collections.Generic.IDictionary`2" />
+          <AitFeature Name="System.Collections.Generic.IEnumerable`1" />
+          <AitFeature Name="System.Collections.Generic.IEnumerator`1" />
+          <AitFeature Name="System.Collections.Generic.IEqualityComparer`1" />
+          <AitFeature Name="System.Collections.Generic.IList`1" />
+          <AitFeature Name="System.Collections.Generic.ISet`1" />
+          <AitFeature Name="System.Collections.Generic.KeyValuePair`2" />
+          <AitFeature Name="System.Collections.Generic.List`1" />
+          <AitFeature Name="System.Collections.Generic.Queue`1" />
+          <AitFeature Name="System.Collections.IEnumerable" />
+          <AitFeature Name="System.Collections.IEnumerable.GetEnumerator" />
+          <AitFeature Name="System.Collections.IEnumerator" />
+          <AitFeature Name="System.Collections.IEnumerator.MoveNext" />
+          <AitFeature Name="System.Collections.IEnumerator.Reset" />
+          <AitFeature Name="System.Collections.IEnumerator.get_Current" />
+          <AitFeature Name="System.Collections.IList" />
+          <AitFeature Name="System.Collections.Specialized.INotifyCollectionChanged" />
+          <AitFeature Name="System.Collections.Specialized.INotifyCollectionChanged.add_CollectionChanged" />
+          <AitFeature Name="System.Collections.Specialized.NotifyCollectionChangedAction" />
+          <AitFeature Name="System.Collections.Specialized.NotifyCollectionChangedEventArgs" />
+          <AitFeature Name="System.Collections.Specialized.NotifyCollectionChangedEventArgs..ctor" />
+          <AitFeature Name="System.Collections.Specialized.NotifyCollectionChangedEventArgs.get_Action" />
+          <AitFeature Name="System.Collections.Specialized.NotifyCollectionChangedEventArgs.get_NewItems" />
+          <AitFeature Name="System.Collections.Specialized.NotifyCollectionChangedEventHandler" />
+          <AitFeature Name="System.Collections.Specialized.NotifyCollectionChangedEventHandler..ctor" />
+          <AitFeature Name="System.Collections.Specialized.NotifyCollectionChangedEventHandler.Invoke" />
+          <AitFeature Name="System.DateTime" />
+          <AitFeature Name="System.DateTime.Subtract" />
+          <AitFeature Name="System.DateTime.get_Now" />
+          <AitFeature Name="System.DateTime.get_UtcNow" />
+          <AitFeature Name="System.DateTime.op_Subtraction" />
+          <AitFeature Name="System.Delegate" />
+          <AitFeature Name="System.Delegate.Combine" />
+          <AitFeature Name="System.Delegate.Remove" />
+          <AitFeature Name="System.Diagnostics.CodeAnalysis.SuppressMessageAttribute" />
+          <AitFeature Name="System.Diagnostics.CodeAnalysis.SuppressMessageAttribute..ctor" />
+          <AitFeature Name="System.Diagnostics.DebuggableAttribute" />
+          <AitFeature Name="System.Diagnostics.DebuggableAttribute..ctor" />
+          <AitFeature Name="System.Diagnostics.Debugger" />
+          <AitFeature Name="System.Diagnostics.Debugger.get_IsAttached" />
+          <AitFeature Name="System.Diagnostics.DebuggerHiddenAttribute" />
+          <AitFeature Name="System.Diagnostics.DebuggerHiddenAttribute..ctor" />
+          <AitFeature Name="System.Diagnostics.DebuggerStepThroughAttribute" />
+          <AitFeature Name="System.Diagnostics.DebuggerStepThroughAttribute..ctor" />
+          <AitFeature Name="System.Double" />
+          <AitFeature Name="System.Enum" />
+          <AitFeature Name="System.Enum.Parse" />
+          <AitFeature Name="System.Environment" />
+          <AitFeature Name="System.Environment.get_CurrentManagedThreadId" />
+          <AitFeature Name="System.EventArgs" />
+          <AitFeature Name="System.EventArgs..ctor" />
+          <AitFeature Name="System.EventHandler" />
+          <AitFeature Name="System.EventHandler`1" />
+          <AitFeature Name="System.Exception" />
+          <AitFeature Name="System.Exception..ctor" />
+          <AitFeature Name="System.Exception.get_Message" />
+          <AitFeature Name="System.Func`1" />
+          <AitFeature Name="System.Func`2" />
+          <AitFeature Name="System.GC" />
+          <AitFeature Name="System.GC.SuppressFinalize" />
+          <AitFeature Name="System.Globalization.CultureInfo" />
+          <AitFeature Name="System.Globalization.CultureInfo.get_InvariantCulture" />
+          <AitFeature Name="System.Guid" />
+          <AitFeature Name="System.Guid.NewGuid" />
+          <AitFeature Name="System.IDisposable" />
+          <AitFeature Name="System.IDisposable.Dispose" />
+          <AitFeature Name="System.IFormatProvider" />
+          <AitFeature Name="System.IO.FileNotFoundException" />
+          <AitFeature Name="System.IO.InvalidDataException" />
+          <AitFeature Name="System.IO.InvalidDataException..ctor" />
+          <AitFeature Name="System.IO.MemoryStream" />
+          <AitFeature Name="System.IO.MemoryStream..ctor" />
+          <AitFeature Name="System.IO.MemoryStream.ToArray" />
+          <AitFeature Name="System.IO.Path" />
+          <AitFeature Name="System.IO.Path.Combine" />
+          <AitFeature Name="System.IO.Stream" />
+          <AitFeature Name="System.IO.Stream.get_Length" />
+          <AitFeature Name="System.Int32" />
+          <AitFeature Name="System.InvalidOperationException" />
+          <AitFeature Name="System.InvalidOperationException..ctor" />
+          <AitFeature Name="System.Linq.Enumerable" />
+          <AitFeature Name="System.Linq.Enumerable.Count" />
+          <AitFeature Name="System.Linq.Enumerable.FirstOrDefault" />
+          <AitFeature Name="System.Linq.Enumerable.OrderBy" />
+          <AitFeature Name="System.Linq.Enumerable.Select" />
+          <AitFeature Name="System.Linq.Enumerable.Sum" />
+          <AitFeature Name="System.Linq.Enumerable.ToDictionary" />
+          <AitFeature Name="System.Linq.IOrderedEnumerable`1" />
+          <AitFeature Name="System.NotSupportedException" />
+          <AitFeature Name="System.NotSupportedException..ctor" />
+          <AitFeature Name="System.Nullable`1" />
+          <AitFeature Name="System.Object" />
+          <AitFeature Name="System.Object..ctor" />
+          <AitFeature Name="System.Object.Equals" />
+          <AitFeature Name="System.Object.Finalize" />
+          <AitFeature Name="System.Object.GetType" />
+          <AitFeature Name="System.Object.ToString" />
+          <AitFeature Name="System.ObjectDisposedException" />
+          <AitFeature Name="System.OperationCanceledException" />
+          <AitFeature Name="System.ParamArrayAttribute" />
+          <AitFeature Name="System.ParamArrayAttribute..ctor" />
+          <AitFeature Name="System.Random" />
+          <AitFeature Name="System.Random..ctor" />
+          <AitFeature Name="System.Random.Next" />
+          <AitFeature Name="System.Reflection.Assembly" />
+          <AitFeature Name="System.Reflection.Assembly.get_FullName" />
+          <AitFeature Name="System.Reflection.AssemblyCompanyAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyCompanyAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyConfigurationAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyConfigurationAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyCopyrightAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyCopyrightAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyCultureAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyCultureAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyDescriptionAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyDescriptionAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyName" />
+          <AitFeature Name="System.Reflection.AssemblyName..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyName.get_Version" />
+          <AitFeature Name="System.Reflection.AssemblyProductAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyProductAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyTitleAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyTitleAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyTrademarkAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyTrademarkAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyVersionAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyVersionAttribute..ctor" />
+          <AitFeature Name="System.Reflection.DefaultMemberAttribute" />
+          <AitFeature Name="System.Reflection.DefaultMemberAttribute..ctor" />
+          <AitFeature Name="System.Reflection.EventInfo" />
+          <AitFeature Name="System.Reflection.EventInfo.AddEventHandler" />
+          <AitFeature Name="System.Reflection.EventInfo.get_EventHandlerType" />
+          <AitFeature Name="System.Reflection.IntrospectionExtensions" />
+          <AitFeature Name="System.Reflection.IntrospectionExtensions.GetTypeInfo" />
+          <AitFeature Name="System.Reflection.MethodBase" />
+          <AitFeature Name="System.Reflection.MethodBase.Invoke" />
+          <AitFeature Name="System.Reflection.MethodBase.get_IsStatic" />
+          <AitFeature Name="System.Reflection.MethodInfo" />
+          <AitFeature Name="System.Reflection.MethodInfo.CreateDelegate" />
+          <AitFeature Name="System.Reflection.PropertyInfo" />
+          <AitFeature Name="System.Reflection.PropertyInfo.GetValue" />
+          <AitFeature Name="System.Reflection.PropertyInfo.SetValue" />
+          <AitFeature Name="System.Reflection.RuntimeReflectionExtensions" />
+          <AitFeature Name="System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperty" />
+          <AitFeature Name="System.Reflection.TypeInfo" />
+          <AitFeature Name="System.Reflection.TypeInfo.GetDeclaredEvent" />
+          <AitFeature Name="System.Reflection.TypeInfo.GetDeclaredMethod" />
+          <AitFeature Name="System.Reflection.TypeInfo.get_Assembly" />
+          <AitFeature Name="System.Resources.NeutralResourcesLanguageAttribute" />
+          <AitFeature Name="System.Resources.NeutralResourcesLanguageAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncStateMachineAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncStateMachineAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncTaskMethodBuilder" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncTaskMethodBuilder.AwaitUnsafeOnCompleted" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncTaskMethodBuilder.Create" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetException" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetResult" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetStateMachine" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncTaskMethodBuilder.Start" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncTaskMethodBuilder.get_Task" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilationRelaxationsAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilationRelaxationsAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilerGeneratedAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.IAsyncStateMachine" />
+          <AitFeature Name="System.Runtime.CompilerServices.IAsyncStateMachine.MoveNext" />
+          <AitFeature Name="System.Runtime.CompilerServices.IAsyncStateMachine.SetStateMachine" />
+          <AitFeature Name="System.Runtime.CompilerServices.InternalsVisibleToAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.InternalsVisibleToAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.IsVolatile" />
+          <AitFeature Name="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.TaskAwaiter" />
+          <AitFeature Name="System.Runtime.CompilerServices.TaskAwaiter.GetResult" />
+          <AitFeature Name="System.Runtime.CompilerServices.TaskAwaiter.get_IsCompleted" />
+          <AitFeature Name="System.Runtime.CompilerServices.TaskAwaiter`1" />
+          <AitFeature Name="System.Runtime.InteropServices.ComVisibleAttribute" />
+          <AitFeature Name="System.Runtime.InteropServices.ComVisibleAttribute..ctor" />
+          <AitFeature Name="System.Runtime.Serialization.DataContractAttribute" />
+          <AitFeature Name="System.Runtime.Serialization.DataContractAttribute..ctor" />
+          <AitFeature Name="System.Runtime.Serialization.DataContractSerializer" />
+          <AitFeature Name="System.Runtime.Serialization.DataContractSerializer..ctor" />
+          <AitFeature Name="System.Runtime.Serialization.DataMemberAttribute" />
+          <AitFeature Name="System.Runtime.Serialization.DataMemberAttribute..ctor" />
+          <AitFeature Name="System.Runtime.Serialization.Json.DataContractJsonSerializer" />
+          <AitFeature Name="System.Runtime.Serialization.Json.DataContractJsonSerializer..ctor" />
+          <AitFeature Name="System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject" />
+          <AitFeature Name="System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject" />
+          <AitFeature Name="System.Runtime.Serialization.XmlObjectSerializer" />
+          <AitFeature Name="System.Runtime.Serialization.XmlObjectSerializer.ReadObject" />
+          <AitFeature Name="System.Runtime.Serialization.XmlObjectSerializer.WriteObject" />
+          <AitFeature Name="System.Runtime.Versioning.TargetFrameworkAttribute" />
+          <AitFeature Name="System.Runtime.Versioning.TargetFrameworkAttribute..ctor" />
+          <AitFeature Name="System.RuntimeTypeHandle" />
+          <AitFeature Name="System.String" />
+          <AitFeature Name="System.String.Concat" />
+          <AitFeature Name="System.String.Empty" />
+          <AitFeature Name="System.String.Equals" />
+          <AitFeature Name="System.String.Format" />
+          <AitFeature Name="System.String.IsNullOrEmpty" />
+          <AitFeature Name="System.String.IsNullOrWhiteSpace" />
+          <AitFeature Name="System.String.Join" />
+          <AitFeature Name="System.String.Split" />
+          <AitFeature Name="System.String.Substring" />
+          <AitFeature Name="System.String.ToUpperInvariant" />
+          <AitFeature Name="System.String.Trim" />
+          <AitFeature Name="System.String.get_Length" />
+          <AitFeature Name="System.String.op_Equality" />
+          <AitFeature Name="System.String.op_Inequality" />
+          <AitFeature Name="System.StringComparer" />
+          <AitFeature Name="System.StringComparer.get_OrdinalIgnoreCase" />
+          <AitFeature Name="System.StringComparison" />
+          <AitFeature Name="System.Text.Encoding" />
+          <AitFeature Name="System.Text.Encoding.GetBytes" />
+          <AitFeature Name="System.Text.Encoding.GetString" />
+          <AitFeature Name="System.Text.Encoding.get_UTF8" />
+          <AitFeature Name="System.Threading.CancellationToken" />
+          <AitFeature Name="System.Threading.CancellationToken.get_IsCancellationRequested" />
+          <AitFeature Name="System.Threading.CancellationTokenSource" />
+          <AitFeature Name="System.Threading.CancellationTokenSource..ctor" />
+          <AitFeature Name="System.Threading.CancellationTokenSource.Cancel" />
+          <AitFeature Name="System.Threading.CancellationTokenSource.Dispose" />
+          <AitFeature Name="System.Threading.CancellationTokenSource.get_Token" />
+          <AitFeature Name="System.Threading.Interlocked" />
+          <AitFeature Name="System.Threading.Interlocked.CompareExchange" />
+          <AitFeature Name="System.Threading.Monitor" />
+          <AitFeature Name="System.Threading.Monitor.Enter" />
+          <AitFeature Name="System.Threading.Monitor.Exit" />
+          <AitFeature Name="System.Threading.SemaphoreSlim" />
+          <AitFeature Name="System.Threading.SemaphoreSlim..ctor" />
+          <AitFeature Name="System.Threading.SemaphoreSlim.Release" />
+          <AitFeature Name="System.Threading.SemaphoreSlim.Wait" />
+          <AitFeature Name="System.Threading.SemaphoreSlim.WaitAsync" />
+          <AitFeature Name="System.Threading.Tasks.Task" />
+          <AitFeature Name="System.Threading.Tasks.Task.Delay" />
+          <AitFeature Name="System.Threading.Tasks.Task.GetAwaiter" />
+          <AitFeature Name="System.Threading.Tasks.Task.Run" />
+          <AitFeature Name="System.Threading.Tasks.Task.Wait" />
+          <AitFeature Name="System.Threading.Tasks.TaskCanceledException" />
+          <AitFeature Name="System.Threading.Tasks.Task`1" />
+          <AitFeature Name="System.TimeSpan" />
+          <AitFeature Name="System.TimeSpan..ctor" />
+          <AitFeature Name="System.TimeSpan.FromHours" />
+          <AitFeature Name="System.TimeSpan.FromMilliseconds" />
+          <AitFeature Name="System.TimeSpan.FromSeconds" />
+          <AitFeature Name="System.TimeSpan.Zero" />
+          <AitFeature Name="System.TimeSpan.get_TotalSeconds" />
+          <AitFeature Name="System.TimeSpan.op_GreaterThan" />
+          <AitFeature Name="System.TimeSpan.op_LessThan" />
+          <AitFeature Name="System.TimeSpan.op_Subtraction" />
+          <AitFeature Name="System.Tuple`3" />
+          <AitFeature Name="System.Type" />
+          <AitFeature Name="System.Type.GetType" />
+          <AitFeature Name="System.Type.GetTypeFromHandle" />
+          <AitFeature Name="System.Uri" />
+          <AitFeature Name="System.Uri..ctor" />
+          <AitFeature Name="System.Uri.get_Segments" />
+          <AitFeature Name="System.ValueType" />
+          <AitFeature Name="System.Version" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="WirelessHelper.exe" Id="0000841064dc97329bba22fe0fb43fc3722bace4cf9d">
+        <AitCategory Id="DotNet">
+          <AitFeature Name="System.Action`1" />
+          <AitFeature Name="System.ArgumentException" />
+          <AitFeature Name="System.ArgumentException..ctor" />
+          <AitFeature Name="System.AsyncCallback" />
+          <AitFeature Name="System.Boolean" />
+          <AitFeature Name="System.Char" />
+          <AitFeature Name="System.CodeDom.Compiler.GeneratedCodeAttribute" />
+          <AitFeature Name="System.CodeDom.Compiler.GeneratedCodeAttribute..ctor" />
+          <AitFeature Name="System.Collections.Generic.Dictionary`2" />
+          <AitFeature Name="System.Collections.Generic.ICollection`1" />
+          <AitFeature Name="System.Collections.Generic.IDictionary`2" />
+          <AitFeature Name="System.Collections.Generic.IEnumerable`1" />
+          <AitFeature Name="System.Collections.Generic.IEnumerator`1" />
+          <AitFeature Name="System.Collections.Generic.IReadOnlyDictionary`2" />
+          <AitFeature Name="System.Collections.Generic.KeyValuePair`2" />
+          <AitFeature Name="System.Collections.Generic.List`1" />
+          <AitFeature Name="System.Collections.IEnumerator" />
+          <AitFeature Name="System.Collections.IEnumerator.MoveNext" />
+          <AitFeature Name="System.Convert" />
+          <AitFeature Name="System.Convert.ToInt32" />
+          <AitFeature Name="System.Diagnostics.DebuggableAttribute" />
+          <AitFeature Name="System.Diagnostics.DebuggableAttribute..ctor" />
+          <AitFeature Name="System.Diagnostics.DebuggerHiddenAttribute" />
+          <AitFeature Name="System.Diagnostics.DebuggerHiddenAttribute..ctor" />
+          <AitFeature Name="System.Diagnostics.DebuggerNonUserCodeAttribute" />
+          <AitFeature Name="System.Diagnostics.DebuggerNonUserCodeAttribute..ctor" />
+          <AitFeature Name="System.Double" />
+          <AitFeature Name="System.Exception" />
+          <AitFeature Name="System.Exception..ctor" />
+          <AitFeature Name="System.FormatException" />
+          <AitFeature Name="System.Func`2" />
+          <AitFeature Name="System.Guid" />
+          <AitFeature Name="System.IAsyncResult" />
+          <AitFeature Name="System.IDisposable" />
+          <AitFeature Name="System.IDisposable.Dispose" />
+          <AitFeature Name="System.Int32" />
+          <AitFeature Name="System.InvalidOperationException" />
+          <AitFeature Name="System.InvalidOperationException..ctor" />
+          <AitFeature Name="System.MulticastDelegate" />
+          <AitFeature Name="System.NotImplementedException" />
+          <AitFeature Name="System.NotImplementedException..ctor" />
+          <AitFeature Name="System.Object" />
+          <AitFeature Name="System.Object..ctor" />
+          <AitFeature Name="System.Object.ToString" />
+          <AitFeature Name="System.Reflection.AssemblyCompanyAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyCompanyAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyConfigurationAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyConfigurationAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyCopyrightAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyCopyrightAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyDescriptionAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyDescriptionAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyFileVersionAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyFileVersionAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyProductAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyProductAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyTitleAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyTitleAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyTrademarkAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyTrademarkAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncStateMachineAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncStateMachineAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncVoidMethodBuilder" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Create" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetException" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetResult" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetStateMachine" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilationRelaxationsAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilationRelaxationsAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilerGeneratedAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.IAsyncStateMachine" />
+          <AitFeature Name="System.Runtime.CompilerServices.IAsyncStateMachine.MoveNext" />
+          <AitFeature Name="System.Runtime.CompilerServices.IAsyncStateMachine.SetStateMachine" />
+          <AitFeature Name="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.RuntimeHelpers" />
+          <AitFeature Name="System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor" />
+          <AitFeature Name="System.Runtime.CompilerServices.TaskAwaiter`1" />
+          <AitFeature Name="System.Runtime.InteropServices.ComVisibleAttribute" />
+          <AitFeature Name="System.Runtime.InteropServices.ComVisibleAttribute..ctor" />
+          <AitFeature Name="System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken" />
+          <AitFeature Name="System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeBufferExtensions" />
+          <AitFeature Name="System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeBufferExtensions.AsBuffer" />
+          <AitFeature Name="System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMarshal" />
+          <AitFeature Name="System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMarshal.AddEventHandler" />
+          <AitFeature Name="System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMarshal.RemoveEventHandler" />
+          <AitFeature Name="System.Runtime.Versioning.TargetFrameworkAttribute" />
+          <AitFeature Name="System.Runtime.Versioning.TargetFrameworkAttribute..ctor" />
+          <AitFeature Name="System.RuntimeTypeHandle" />
+          <AitFeature Name="System.String" />
+          <AitFeature Name="System.String.Compare" />
+          <AitFeature Name="System.String.CompareOrdinal" />
+          <AitFeature Name="System.String.Concat" />
+          <AitFeature Name="System.String.IndexOf" />
+          <AitFeature Name="System.String.IsNullOrEmpty" />
+          <AitFeature Name="System.String.Split" />
+          <AitFeature Name="System.String.Trim" />
+          <AitFeature Name="System.String.get_Chars" />
+          <AitFeature Name="System.String.get_Length" />
+          <AitFeature Name="System.String.op_Equality" />
+          <AitFeature Name="System.String.op_Inequality" />
+          <AitFeature Name="System.StringComparison" />
+          <AitFeature Name="System.Text.Encoding" />
+          <AitFeature Name="System.Text.Encoding.GetBytes" />
+          <AitFeature Name="System.Text.Encoding.get_UTF8" />
+          <AitFeature Name="System.Threading.CancellationToken" />
+          <AitFeature Name="System.Threading.CancellationTokenSource" />
+          <AitFeature Name="System.Threading.CancellationTokenSource..ctor" />
+          <AitFeature Name="System.Threading.CancellationTokenSource.get_Token" />
+          <AitFeature Name="System.Threading.Tasks.Task`1" />
+          <AitFeature Name="System.Type" />
+          <AitFeature Name="System.Type.GetTypeFromHandle" />
+          <AitFeature Name="System.Type.get_TypeHandle" />
+          <AitFeature Name="System.Uri" />
+          <AitFeature Name="System.Uri..ctor" />
+          <AitFeature Name="System.ValueType" />
+          <AitFeature Name="System.WindowsRuntimeSystemExtensions" />
+          <AitFeature Name="System.WindowsRuntimeSystemExtensions.AsTask" />
+          <AitFeature Name="System.WindowsRuntimeSystemExtensions.GetAwaiter" />
+        </AitCategory>
+        <AitCategory Id="DotNetWinRt">
+          <AitFeature Name="Windows.ApplicationModel.Activation.ApplicationExecutionState" />
+          <AitFeature Name="Windows.ApplicationModel.Activation.LaunchActivatedEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.Activation.LaunchActivatedEventArgs.get_Arguments" />
+          <AitFeature Name="Windows.ApplicationModel.Activation.LaunchActivatedEventArgs.get_PreviousExecutionState" />
+          <AitFeature Name="Windows.ApplicationModel.Background.BackgroundAccessStatus" />
+          <AitFeature Name="Windows.ApplicationModel.Background.BackgroundExecutionManager" />
+          <AitFeature Name="Windows.ApplicationModel.Background.BackgroundExecutionManager.RequestAccessAsync" />
+          <AitFeature Name="Windows.ApplicationModel.Background.BackgroundTaskBuilder" />
+          <AitFeature Name="Windows.ApplicationModel.Background.BackgroundTaskBuilder..ctor" />
+          <AitFeature Name="Windows.ApplicationModel.Background.BackgroundTaskBuilder.AddCondition" />
+          <AitFeature Name="Windows.ApplicationModel.Background.BackgroundTaskBuilder.Register" />
+          <AitFeature Name="Windows.ApplicationModel.Background.BackgroundTaskBuilder.SetTrigger" />
+          <AitFeature Name="Windows.ApplicationModel.Background.BackgroundTaskBuilder.put_Name" />
+          <AitFeature Name="Windows.ApplicationModel.Background.BackgroundTaskBuilder.put_TaskEntryPoint" />
+          <AitFeature Name="Windows.ApplicationModel.Background.BackgroundTaskRegistration" />
+          <AitFeature Name="Windows.ApplicationModel.Background.BackgroundTaskRegistration.get_AllTasks" />
+          <AitFeature Name="Windows.ApplicationModel.Background.IBackgroundCondition" />
+          <AitFeature Name="Windows.ApplicationModel.Background.IBackgroundTaskRegistration" />
+          <AitFeature Name="Windows.ApplicationModel.Background.IBackgroundTaskRegistration.Unregister" />
+          <AitFeature Name="Windows.ApplicationModel.Background.IBackgroundTaskRegistration.get_Name" />
+          <AitFeature Name="Windows.ApplicationModel.Background.IBackgroundTrigger" />
+          <AitFeature Name="Windows.ApplicationModel.Background.SystemCondition" />
+          <AitFeature Name="Windows.ApplicationModel.Background.SystemCondition..ctor" />
+          <AitFeature Name="Windows.ApplicationModel.Background.SystemConditionType" />
+          <AitFeature Name="Windows.ApplicationModel.Background.SystemTrigger" />
+          <AitFeature Name="Windows.ApplicationModel.Background.SystemTrigger..ctor" />
+          <AitFeature Name="Windows.ApplicationModel.Background.SystemTriggerType" />
+          <AitFeature Name="Windows.ApplicationModel.SuspendingDeferral" />
+          <AitFeature Name="Windows.ApplicationModel.SuspendingDeferral.Complete" />
+          <AitFeature Name="Windows.ApplicationModel.SuspendingEventArgs" />
+          <AitFeature Name="Windows.ApplicationModel.SuspendingEventArgs.get_SuspendingOperation" />
+          <AitFeature Name="Windows.ApplicationModel.SuspendingOperation" />
+          <AitFeature Name="Windows.ApplicationModel.SuspendingOperation.GetDeferral" />
+          <AitFeature Name="Windows.Data.Xml.Dom.IXmlNode" />
+          <AitFeature Name="Windows.Data.Xml.Dom.IXmlNodeSerializer" />
+          <AitFeature Name="Windows.Data.Xml.Dom.IXmlNodeSerializer.put_InnerText" />
+          <AitFeature Name="Windows.Data.Xml.Dom.XmlDocument" />
+          <AitFeature Name="Windows.Data.Xml.Dom.XmlDocument.GetElementsByTagName" />
+          <AitFeature Name="Windows.Data.Xml.Dom.XmlNodeList" />
+          <AitFeature Name="Windows.Foundation.Collections.IPropertySet" />
+          <AitFeature Name="Windows.Foundation.IAsyncOperationWithProgress`2" />
+          <AitFeature Name="Windows.Foundation.IAsyncOperation`1" />
+          <AitFeature Name="Windows.Networking.Connectivity.ConnectionProfile" />
+          <AitFeature Name="Windows.Networking.Connectivity.ConnectionProfile.get_ProfileName" />
+          <AitFeature Name="Windows.Networking.Connectivity.NetworkInformation" />
+          <AitFeature Name="Windows.Networking.Connectivity.NetworkInformation.GetInternetConnectionProfile" />
+          <AitFeature Name="Windows.Storage.ApplicationData" />
+          <AitFeature Name="Windows.Storage.ApplicationData.get_Current" />
+          <AitFeature Name="Windows.Storage.ApplicationData.get_LocalSettings" />
+          <AitFeature Name="Windows.Storage.ApplicationDataContainer" />
+          <AitFeature Name="Windows.Storage.ApplicationDataContainer.get_Values" />
+          <AitFeature Name="Windows.Storage.Streams.IBuffer" />
+          <AitFeature Name="Windows.System.Launcher" />
+          <AitFeature Name="Windows.System.Launcher.LaunchUriAsync" />
+          <AitFeature Name="Windows.UI.Notifications.ToastNotification" />
+          <AitFeature Name="Windows.UI.Notifications.ToastNotification..ctor" />
+          <AitFeature Name="Windows.UI.Notifications.ToastNotificationManager" />
+          <AitFeature Name="Windows.UI.Notifications.ToastNotificationManager.CreateToastNotifier" />
+          <AitFeature Name="Windows.UI.Notifications.ToastNotificationManager.GetTemplateContent" />
+          <AitFeature Name="Windows.UI.Notifications.ToastNotifier" />
+          <AitFeature Name="Windows.UI.Notifications.ToastNotifier.Show" />
+          <AitFeature Name="Windows.UI.Notifications.ToastTemplateType" />
+          <AitFeature Name="Windows.UI.Popups.IUICommand" />
+          <AitFeature Name="Windows.UI.Popups.MessageDialog" />
+          <AitFeature Name="Windows.UI.Popups.MessageDialog..ctor" />
+          <AitFeature Name="Windows.UI.Popups.MessageDialog.ShowAsync" />
+          <AitFeature Name="Windows.UI.Xaml.Application" />
+          <AitFeature Name="Windows.UI.Xaml.Application..ctor" />
+          <AitFeature Name="Windows.UI.Xaml.Application.LoadComponent" />
+          <AitFeature Name="Windows.UI.Xaml.Application.Start" />
+          <AitFeature Name="Windows.UI.Xaml.Application.add_Suspending" />
+          <AitFeature Name="Windows.UI.Xaml.Application.remove_Suspending" />
+          <AitFeature Name="Windows.UI.Xaml.ApplicationInitializationCallback" />
+          <AitFeature Name="Windows.UI.Xaml.ApplicationInitializationCallback..ctor" />
+          <AitFeature Name="Windows.UI.Xaml.ApplicationInitializationCallbackParams" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.ContentControl" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.ContentControl.get_Content" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.ContentControl.get_ContentTransitions" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.ContentControl.put_ContentTransitions" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Control" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Control.get_IsEnabled" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Control.put_IsEnabled" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Frame" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Frame..ctor" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Frame.Navigate" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Frame.add_Navigated" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Frame.put_CacheSize" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Frame.remove_Navigated" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Page" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Page..ctor" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Page.put_NavigationCacheMode" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.PasswordBox" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.PasswordBox.get_Password" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.PasswordBox.put_Password" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Primitives.ButtonBase" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Primitives.ButtonBase.add_Click" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Primitives.ButtonBase.remove_Click" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Primitives.ComponentResourceLocation" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.TextBox" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.TextBox.get_Text" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.TextBox.put_Text" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.TextChangedEventArgs" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.ToggleSwitch" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.ToggleSwitch.add_Toggled" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.ToggleSwitch.get_IsOn" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.ToggleSwitch.put_IsOn" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.ToggleSwitch.remove_Toggled" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.UserControl" />
+          <AitFeature Name="Windows.UI.Xaml.FrameworkElement" />
+          <AitFeature Name="Windows.UI.Xaml.FrameworkElement.FindName" />
+          <AitFeature Name="Windows.UI.Xaml.Markup.IComponentConnector" />
+          <AitFeature Name="Windows.UI.Xaml.Markup.IXamlMember" />
+          <AitFeature Name="Windows.UI.Xaml.Markup.IXamlMetadataProvider" />
+          <AitFeature Name="Windows.UI.Xaml.Markup.IXamlMetadataProvider.GetXamlType" />
+          <AitFeature Name="Windows.UI.Xaml.Markup.IXamlType" />
+          <AitFeature Name="Windows.UI.Xaml.Markup.IXamlType.get_FullName" />
+          <AitFeature Name="Windows.UI.Xaml.Markup.IXamlType.get_IsConstructible" />
+          <AitFeature Name="Windows.UI.Xaml.Markup.IXamlType.get_UnderlyingType" />
+          <AitFeature Name="Windows.UI.Xaml.Markup.XmlnsDefinition" />
+          <AitFeature Name="Windows.UI.Xaml.Media.Animation.NavigationThemeTransition" />
+          <AitFeature Name="Windows.UI.Xaml.Media.Animation.NavigationThemeTransition..ctor" />
+          <AitFeature Name="Windows.UI.Xaml.Media.Animation.Transition" />
+          <AitFeature Name="Windows.UI.Xaml.Media.Animation.TransitionCollection" />
+          <AitFeature Name="Windows.UI.Xaml.Media.Animation.TransitionCollection..ctor" />
+          <AitFeature Name="Windows.UI.Xaml.Navigation.NavigatedEventHandler" />
+          <AitFeature Name="Windows.UI.Xaml.Navigation.NavigatedEventHandler..ctor" />
+          <AitFeature Name="Windows.UI.Xaml.Navigation.NavigationCacheMode" />
+          <AitFeature Name="Windows.UI.Xaml.Navigation.NavigationEventArgs" />
+          <AitFeature Name="Windows.UI.Xaml.RoutedEventArgs" />
+          <AitFeature Name="Windows.UI.Xaml.RoutedEventHandler" />
+          <AitFeature Name="Windows.UI.Xaml.RoutedEventHandler..ctor" />
+          <AitFeature Name="Windows.UI.Xaml.SuspendingEventHandler" />
+          <AitFeature Name="Windows.UI.Xaml.SuspendingEventHandler..ctor" />
+          <AitFeature Name="Windows.UI.Xaml.UIElement" />
+          <AitFeature Name="Windows.UI.Xaml.UIElement.add_LostFocus" />
+          <AitFeature Name="Windows.UI.Xaml.UIElement.remove_LostFocus" />
+          <AitFeature Name="Windows.UI.Xaml.Window" />
+          <AitFeature Name="Windows.UI.Xaml.Window.Activate" />
+          <AitFeature Name="Windows.UI.Xaml.Window.get_Content" />
+          <AitFeature Name="Windows.UI.Xaml.Window.get_Current" />
+          <AitFeature Name="Windows.UI.Xaml.Window.put_Content" />
+          <AitFeature Name="Windows.Web.Http.HttpBufferContent" />
+          <AitFeature Name="Windows.Web.Http.HttpBufferContent..ctor" />
+          <AitFeature Name="Windows.Web.Http.HttpClient" />
+          <AitFeature Name="Windows.Web.Http.HttpClient..ctor" />
+          <AitFeature Name="Windows.Web.Http.HttpClient.PostAsync" />
+          <AitFeature Name="Windows.Web.Http.HttpProgress" />
+          <AitFeature Name="Windows.Web.Http.HttpResponseMessage" />
+          <AitFeature Name="Windows.Web.Http.HttpResponseMessage.get_Content" />
+          <AitFeature Name="Windows.Web.Http.IHttpContent" />
+          <AitFeature Name="Windows.Web.Http.IHttpContent.ReadAsStringAsync" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="Microsoft.AdMediator.WindowsPhone81.dll" Id="0000a7e9a33bbcd60153461fa8c1067d9dd12a7c31d6">
+        <AitCategory Id="ApiStatic">
+          <AitFeature Name="mscoree.dll!_CorDllMain" />
+        </AitCategory>
+        <AitCategory Id="DotNet">
+          <AitFeature Name="System.Action" />
+          <AitFeature Name="System.Action.Invoke" />
+          <AitFeature Name="System.Action`1" />
+          <AitFeature Name="System.ArgumentException" />
+          <AitFeature Name="System.ArgumentException..ctor" />
+          <AitFeature Name="System.ArgumentNullException" />
+          <AitFeature Name="System.ArgumentNullException..ctor" />
+          <AitFeature Name="System.AsyncCallback" />
+          <AitFeature Name="System.Attribute" />
+          <AitFeature Name="System.CLSCompliantAttribute" />
+          <AitFeature Name="System.CLSCompliantAttribute..ctor" />
+          <AitFeature Name="System.Char" />
+          <AitFeature Name="System.CodeDom.Compiler.GeneratedCodeAttribute" />
+          <AitFeature Name="System.CodeDom.Compiler.GeneratedCodeAttribute..ctor" />
+          <AitFeature Name="System.Collections.Generic.Dictionary`2" />
+          <AitFeature Name="System.Collections.Generic.ICollection`1" />
+          <AitFeature Name="System.Collections.Generic.IDictionary`2" />
+          <AitFeature Name="System.Collections.Generic.IEnumerable`1" />
+          <AitFeature Name="System.Collections.Generic.IEqualityComparer`1" />
+          <AitFeature Name="System.Collections.Generic.IList`1" />
+          <AitFeature Name="System.Collections.Generic.List`1" />
+          <AitFeature Name="System.Convert" />
+          <AitFeature Name="System.Convert.ToInt32" />
+          <AitFeature Name="System.DateTime" />
+          <AitFeature Name="System.DateTime.MinValue" />
+          <AitFeature Name="System.DateTime.op_Inequality" />
+          <AitFeature Name="System.DateTimeOffset" />
+          <AitFeature Name="System.DateTimeOffset.op_Implicit" />
+          <AitFeature Name="System.Delegate" />
+          <AitFeature Name="System.Delegate.Combine" />
+          <AitFeature Name="System.Delegate.Remove" />
+          <AitFeature Name="System.Diagnostics.CodeAnalysis.SuppressMessageAttribute" />
+          <AitFeature Name="System.Diagnostics.CodeAnalysis.SuppressMessageAttribute..ctor" />
+          <AitFeature Name="System.Diagnostics.DebuggableAttribute" />
+          <AitFeature Name="System.Diagnostics.DebuggableAttribute..ctor" />
+          <AitFeature Name="System.Diagnostics.DebuggerHiddenAttribute" />
+          <AitFeature Name="System.Diagnostics.DebuggerHiddenAttribute..ctor" />
+          <AitFeature Name="System.Diagnostics.DebuggerNonUserCodeAttribute" />
+          <AitFeature Name="System.Diagnostics.DebuggerNonUserCodeAttribute..ctor" />
+          <AitFeature Name="System.Diagnostics.DebuggerStepThroughAttribute" />
+          <AitFeature Name="System.Diagnostics.DebuggerStepThroughAttribute..ctor" />
+          <AitFeature Name="System.Double" />
+          <AitFeature Name="System.EventArgs" />
+          <AitFeature Name="System.EventHandler" />
+          <AitFeature Name="System.EventHandler.Invoke" />
+          <AitFeature Name="System.EventHandler`1" />
+          <AitFeature Name="System.Exception" />
+          <AitFeature Name="System.FormatException" />
+          <AitFeature Name="System.Func`1" />
+          <AitFeature Name="System.Func`2" />
+          <AitFeature Name="System.GC" />
+          <AitFeature Name="System.GC.SuppressFinalize" />
+          <AitFeature Name="System.Guid" />
+          <AitFeature Name="System.IAsyncResult" />
+          <AitFeature Name="System.IDisposable" />
+          <AitFeature Name="System.IDisposable.Dispose" />
+          <AitFeature Name="System.IO.FileNotFoundException" />
+          <AitFeature Name="System.IO.Path" />
+          <AitFeature Name="System.IO.Path.Combine" />
+          <AitFeature Name="System.IO.Stream" />
+          <AitFeature Name="System.IO.WindowsRuntimeStorageExtensions" />
+          <AitFeature Name="System.IO.WindowsRuntimeStorageExtensions.OpenStreamForReadAsync" />
+          <AitFeature Name="System.IO.WindowsRuntimeStreamExtensions" />
+          <AitFeature Name="System.IO.WindowsRuntimeStreamExtensions.AsStreamForRead" />
+          <AitFeature Name="System.IO.WindowsRuntimeStreamExtensions.AsStreamForWrite" />
+          <AitFeature Name="System.Int32" />
+          <AitFeature Name="System.Int64" />
+          <AitFeature Name="System.InvalidOperationException" />
+          <AitFeature Name="System.InvalidOperationException..ctor" />
+          <AitFeature Name="System.Linq.Enumerable" />
+          <AitFeature Name="System.Linq.Enumerable.First" />
+          <AitFeature Name="System.MulticastDelegate" />
+          <AitFeature Name="System.NotImplementedException" />
+          <AitFeature Name="System.NotImplementedException..ctor" />
+          <AitFeature Name="System.Nullable`1" />
+          <AitFeature Name="System.Object" />
+          <AitFeature Name="System.Object..ctor" />
+          <AitFeature Name="System.Object.Finalize" />
+          <AitFeature Name="System.Object.ToString" />
+          <AitFeature Name="System.ParamArrayAttribute" />
+          <AitFeature Name="System.ParamArrayAttribute..ctor" />
+          <AitFeature Name="System.Reflection.Assembly" />
+          <AitFeature Name="System.Reflection.AssemblyCompanyAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyCompanyAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyConfigurationAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyConfigurationAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyCopyrightAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyCopyrightAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyCultureAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyCultureAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyDescriptionAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyDescriptionAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyProductAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyProductAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyTitleAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyTitleAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyTrademarkAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyTrademarkAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyVersionAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyVersionAttribute..ctor" />
+          <AitFeature Name="System.Reflection.CustomAttributeExtensions" />
+          <AitFeature Name="System.Reflection.CustomAttributeExtensions.GetCustomAttributes" />
+          <AitFeature Name="System.Reflection.IntrospectionExtensions" />
+          <AitFeature Name="System.Reflection.IntrospectionExtensions.GetTypeInfo" />
+          <AitFeature Name="System.Reflection.TypeInfo" />
+          <AitFeature Name="System.Reflection.TypeInfo.get_Assembly" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncStateMachineAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncStateMachineAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncTaskMethodBuilder" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncTaskMethodBuilder.AwaitUnsafeOnCompleted" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncTaskMethodBuilder.Create" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetException" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetResult" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncTaskMethodBuilder.SetStateMachine" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncTaskMethodBuilder.Start" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncTaskMethodBuilder.get_Task" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncVoidMethodBuilder" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Create" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetException" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetResult" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetStateMachine" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilationRelaxationsAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilationRelaxationsAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilerGeneratedAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.IAsyncStateMachine" />
+          <AitFeature Name="System.Runtime.CompilerServices.IAsyncStateMachine.MoveNext" />
+          <AitFeature Name="System.Runtime.CompilerServices.IAsyncStateMachine.SetStateMachine" />
+          <AitFeature Name="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.RuntimeHelpers" />
+          <AitFeature Name="System.Runtime.CompilerServices.RuntimeHelpers.RunClassConstructor" />
+          <AitFeature Name="System.Runtime.CompilerServices.TaskAwaiter" />
+          <AitFeature Name="System.Runtime.CompilerServices.TaskAwaiter.GetResult" />
+          <AitFeature Name="System.Runtime.CompilerServices.TaskAwaiter.get_IsCompleted" />
+          <AitFeature Name="System.Runtime.CompilerServices.TaskAwaiter`1" />
+          <AitFeature Name="System.Runtime.InteropServices.ComVisibleAttribute" />
+          <AitFeature Name="System.Runtime.InteropServices.ComVisibleAttribute..ctor" />
+          <AitFeature Name="System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken" />
+          <AitFeature Name="System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMarshal" />
+          <AitFeature Name="System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMarshal.AddEventHandler" />
+          <AitFeature Name="System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMarshal.RemoveEventHandler" />
+          <AitFeature Name="System.Runtime.Versioning.TargetFrameworkAttribute" />
+          <AitFeature Name="System.Runtime.Versioning.TargetFrameworkAttribute..ctor" />
+          <AitFeature Name="System.Runtime.Versioning.TargetFrameworkAttribute.get_FrameworkName" />
+          <AitFeature Name="System.RuntimeTypeHandle" />
+          <AitFeature Name="System.String" />
+          <AitFeature Name="System.String.Compare" />
+          <AitFeature Name="System.String.CompareOrdinal" />
+          <AitFeature Name="System.String.Concat" />
+          <AitFeature Name="System.String.Empty" />
+          <AitFeature Name="System.String.Equals" />
+          <AitFeature Name="System.String.IsNullOrEmpty" />
+          <AitFeature Name="System.String.Split" />
+          <AitFeature Name="System.String.Trim" />
+          <AitFeature Name="System.StringComparer" />
+          <AitFeature Name="System.StringComparer.get_OrdinalIgnoreCase" />
+          <AitFeature Name="System.StringComparison" />
+          <AitFeature Name="System.Threading.Interlocked" />
+          <AitFeature Name="System.Threading.Interlocked.CompareExchange" />
+          <AitFeature Name="System.Threading.SemaphoreSlim" />
+          <AitFeature Name="System.Threading.SemaphoreSlim..ctor" />
+          <AitFeature Name="System.Threading.SemaphoreSlim.Release" />
+          <AitFeature Name="System.Threading.SemaphoreSlim.WaitAsync" />
+          <AitFeature Name="System.Threading.Tasks.Task" />
+          <AitFeature Name="System.Threading.Tasks.Task.GetAwaiter" />
+          <AitFeature Name="System.Threading.Tasks.Task.Run" />
+          <AitFeature Name="System.Threading.Tasks.Task`1" />
+          <AitFeature Name="System.TimeSpan" />
+          <AitFeature Name="System.TimeSpan.FromHours" />
+          <AitFeature Name="System.TimeSpan.FromSeconds" />
+          <AitFeature Name="System.TimeSpan.get_Days" />
+          <AitFeature Name="System.TimeSpan.get_Hours" />
+          <AitFeature Name="System.TimeSpan.get_Milliseconds" />
+          <AitFeature Name="System.TimeSpan.get_Minutes" />
+          <AitFeature Name="System.TimeSpan.get_Seconds" />
+          <AitFeature Name="System.TimeSpan.get_Ticks" />
+          <AitFeature Name="System.TimeSpan.get_TotalDays" />
+          <AitFeature Name="System.TimeSpan.get_TotalHours" />
+          <AitFeature Name="System.TimeSpan.get_TotalMilliseconds" />
+          <AitFeature Name="System.TimeSpan.get_TotalMinutes" />
+          <AitFeature Name="System.TimeSpan.get_TotalSeconds" />
+          <AitFeature Name="System.Type" />
+          <AitFeature Name="System.Type.GetTypeFromHandle" />
+          <AitFeature Name="System.Type.get_TypeHandle" />
+          <AitFeature Name="System.Uri" />
+          <AitFeature Name="System.ValueType" />
+          <AitFeature Name="System.WindowsRuntimeSystemExtensions" />
+          <AitFeature Name="System.WindowsRuntimeSystemExtensions.GetAwaiter" />
+        </AitCategory>
+        <AitCategory Id="DotNetWinRt">
+          <AitFeature Name="Windows.ApplicationModel.Core.CoreApplication" />
+          <AitFeature Name="Windows.ApplicationModel.Core.CoreApplication.get_MainView" />
+          <AitFeature Name="Windows.ApplicationModel.Core.CoreApplicationView" />
+          <AitFeature Name="Windows.ApplicationModel.Core.CoreApplicationView.get_CoreWindow" />
+          <AitFeature Name="Windows.ApplicationModel.DesignMode" />
+          <AitFeature Name="Windows.ApplicationModel.DesignMode.get_DesignModeEnabled" />
+          <AitFeature Name="Windows.ApplicationModel.Package" />
+          <AitFeature Name="Windows.ApplicationModel.Package.get_Current" />
+          <AitFeature Name="Windows.ApplicationModel.Package.get_InstalledLocation" />
+          <AitFeature Name="Windows.ApplicationModel.Store.CurrentApp" />
+          <AitFeature Name="Windows.ApplicationModel.Store.CurrentApp.get_AppId" />
+          <AitFeature Name="Windows.Devices.Geolocation.BasicGeoposition" />
+          <AitFeature Name="Windows.Devices.Geolocation.BasicGeoposition.Latitude" />
+          <AitFeature Name="Windows.Devices.Geolocation.BasicGeoposition.Longitude" />
+          <AitFeature Name="Windows.Devices.Geolocation.Geocoordinate" />
+          <AitFeature Name="Windows.Devices.Geolocation.Geocoordinate.get_Point" />
+          <AitFeature Name="Windows.Devices.Geolocation.Geolocator" />
+          <AitFeature Name="Windows.Devices.Geolocation.Geolocator..ctor" />
+          <AitFeature Name="Windows.Devices.Geolocation.Geolocator.GetGeopositionAsync" />
+          <AitFeature Name="Windows.Devices.Geolocation.Geolocator.get_LocationStatus" />
+          <AitFeature Name="Windows.Devices.Geolocation.Geolocator.put_DesiredAccuracy" />
+          <AitFeature Name="Windows.Devices.Geolocation.Geopoint" />
+          <AitFeature Name="Windows.Devices.Geolocation.Geopoint.get_Position" />
+          <AitFeature Name="Windows.Devices.Geolocation.Geoposition" />
+          <AitFeature Name="Windows.Devices.Geolocation.Geoposition.get_Coordinate" />
+          <AitFeature Name="Windows.Devices.Geolocation.PositionAccuracy" />
+          <AitFeature Name="Windows.Devices.Geolocation.PositionStatus" />
+          <AitFeature Name="Windows.Foundation.IAsyncAction" />
+          <AitFeature Name="Windows.Foundation.IAsyncOperationWithProgress`2" />
+          <AitFeature Name="Windows.Foundation.IAsyncOperation`1" />
+          <AitFeature Name="Windows.Foundation.TypedEventHandler`2" />
+          <AitFeature Name="Windows.Globalization.GeographicRegion" />
+          <AitFeature Name="Windows.Globalization.GeographicRegion..ctor" />
+          <AitFeature Name="Windows.Globalization.GeographicRegion.get_CodeTwoLetter" />
+          <AitFeature Name="Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation" />
+          <AitFeature Name="Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation..ctor" />
+          <AitFeature Name="Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation.get_OperatingSystem" />
+          <AitFeature Name="Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation.get_SystemManufacturer" />
+          <AitFeature Name="Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation.get_SystemProductName" />
+          <AitFeature Name="Windows.Security.ExchangeActiveSyncProvisioning.EasClientDeviceInformation.get_SystemSku" />
+          <AitFeature Name="Windows.Storage.ApplicationData" />
+          <AitFeature Name="Windows.Storage.ApplicationData.get_Current" />
+          <AitFeature Name="Windows.Storage.ApplicationData.get_LocalFolder" />
+          <AitFeature Name="Windows.Storage.CreationCollisionOption" />
+          <AitFeature Name="Windows.Storage.FileAccessMode" />
+          <AitFeature Name="Windows.Storage.IStorageFile" />
+          <AitFeature Name="Windows.Storage.StorageDeleteOption" />
+          <AitFeature Name="Windows.Storage.StorageFile" />
+          <AitFeature Name="Windows.Storage.StorageFile.DeleteAsync" />
+          <AitFeature Name="Windows.Storage.StorageFile.GetFileFromPathAsync" />
+          <AitFeature Name="Windows.Storage.StorageFile.OpenAsync" />
+          <AitFeature Name="Windows.Storage.StorageFolder" />
+          <AitFeature Name="Windows.Storage.StorageFolder.CreateFileAsync" />
+          <AitFeature Name="Windows.Storage.StorageFolder.CreateFolderAsync" />
+          <AitFeature Name="Windows.Storage.StorageFolder.GetFileAsync" />
+          <AitFeature Name="Windows.Storage.StorageFolder.GetFolderAsync" />
+          <AitFeature Name="Windows.Storage.StorageFolder.get_Path" />
+          <AitFeature Name="Windows.Storage.Streams.IInputStream" />
+          <AitFeature Name="Windows.Storage.Streams.IOutputStream" />
+          <AitFeature Name="Windows.Storage.Streams.IRandomAccessStream" />
+          <AitFeature Name="Windows.UI.Core.CoreDispatcher" />
+          <AitFeature Name="Windows.UI.Core.CoreDispatcher.RunAsync" />
+          <AitFeature Name="Windows.UI.Core.CoreDispatcher.get_HasThreadAccess" />
+          <AitFeature Name="Windows.UI.Core.CoreDispatcherPriority" />
+          <AitFeature Name="Windows.UI.Core.CoreWindow" />
+          <AitFeature Name="Windows.UI.Core.CoreWindow.get_Dispatcher" />
+          <AitFeature Name="Windows.UI.Core.DispatchedHandler" />
+          <AitFeature Name="Windows.UI.Core.DispatchedHandler..ctor" />
+          <AitFeature Name="Windows.UI.Core.VisibilityChangedEventArgs" />
+          <AitFeature Name="Windows.UI.Core.VisibilityChangedEventArgs.get_Visible" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Control" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Control..ctor" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Control.GetTemplateChild" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Control.put_DefaultStyleKey" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Panel" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Panel.get_Children" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.UIElementCollection" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.WebView" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.WebView..ctor" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.WebView.InvokeScriptAsync" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.WebView.Navigate" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.WebView.add_NavigationCompleted" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.WebView.remove_NavigationCompleted" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.WebViewNavigationCompletedEventArgs" />
+          <AitFeature Name="Windows.UI.Xaml.DependencyObject" />
+          <AitFeature Name="Windows.UI.Xaml.DependencyObject.get_Dispatcher" />
+          <AitFeature Name="Windows.UI.Xaml.FrameworkElement" />
+          <AitFeature Name="Windows.UI.Xaml.FrameworkElement.OnApplyTemplate" />
+          <AitFeature Name="Windows.UI.Xaml.FrameworkElement.add_Loaded" />
+          <AitFeature Name="Windows.UI.Xaml.FrameworkElement.add_Unloaded" />
+          <AitFeature Name="Windows.UI.Xaml.FrameworkElement.get_Height" />
+          <AitFeature Name="Windows.UI.Xaml.FrameworkElement.get_Name" />
+          <AitFeature Name="Windows.UI.Xaml.FrameworkElement.get_Width" />
+          <AitFeature Name="Windows.UI.Xaml.FrameworkElement.remove_Loaded" />
+          <AitFeature Name="Windows.UI.Xaml.FrameworkElement.remove_Unloaded" />
+          <AitFeature Name="Windows.UI.Xaml.Markup.IXamlMember" />
+          <AitFeature Name="Windows.UI.Xaml.Markup.IXamlMetadataProvider" />
+          <AitFeature Name="Windows.UI.Xaml.Markup.IXamlType" />
+          <AitFeature Name="Windows.UI.Xaml.Markup.IXamlType.get_FullName" />
+          <AitFeature Name="Windows.UI.Xaml.Markup.IXamlType.get_UnderlyingType" />
+          <AitFeature Name="Windows.UI.Xaml.Markup.XmlnsDefinition" />
+          <AitFeature Name="Windows.UI.Xaml.RoutedEventArgs" />
+          <AitFeature Name="Windows.UI.Xaml.RoutedEventHandler" />
+          <AitFeature Name="Windows.UI.Xaml.RoutedEventHandler..ctor" />
+          <AitFeature Name="Windows.UI.Xaml.UIElement" />
+          <AitFeature Name="Windows.UI.Xaml.UIElement.UpdateLayout" />
+          <AitFeature Name="Windows.UI.Xaml.UIElement.put_Visibility" />
+          <AitFeature Name="Windows.UI.Xaml.Visibility" />
+          <AitFeature Name="Windows.UI.Xaml.Window" />
+          <AitFeature Name="Windows.UI.Xaml.Window.add_VisibilityChanged" />
+          <AitFeature Name="Windows.UI.Xaml.Window.get_Current" />
+          <AitFeature Name="Windows.UI.Xaml.Window.remove_VisibilityChanged" />
+          <AitFeature Name="Windows.UI.Xaml.WindowVisibilityChangedEventHandler" />
+          <AitFeature Name="Windows.UI.Xaml.WindowVisibilityChangedEventHandler..ctor" />
+          <AitFeature Name="Windows.Web.Http.Headers.HttpRequestHeaderCollection" />
+          <AitFeature Name="Windows.Web.Http.Headers.HttpRequestHeaderCollection.put_IfModifiedSince" />
+          <AitFeature Name="Windows.Web.Http.HttpClient" />
+          <AitFeature Name="Windows.Web.Http.HttpClient..ctor" />
+          <AitFeature Name="Windows.Web.Http.HttpClient.GetAsync" />
+          <AitFeature Name="Windows.Web.Http.HttpClient.get_DefaultRequestHeaders" />
+          <AitFeature Name="Windows.Web.Http.HttpProgress" />
+          <AitFeature Name="Windows.Web.Http.HttpResponseMessage" />
+          <AitFeature Name="Windows.Web.Http.HttpResponseMessage.get_Content" />
+          <AitFeature Name="Windows.Web.Http.HttpResponseMessage.get_StatusCode" />
+          <AitFeature Name="Windows.Web.Http.HttpStatusCode" />
+          <AitFeature Name="Windows.Web.Http.IHttpContent" />
+          <AitFeature Name="Windows.Web.Http.IHttpContent.ReadAsInputStreamAsync" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="Microsoft.AdMediator.WindowsPhone81.MicrosoftAdvertising.dll" Id="0000bbd1ded2617d9c2aeac34cf44906dfa4952494af">
+        <AitCategory Id="ApiStatic">
+          <AitFeature Name="mscoree.dll!_CorDllMain" />
+        </AitCategory>
+        <AitCategory Id="DotNet">
+          <AitFeature Name="System.Action" />
+          <AitFeature Name="System.Action..ctor" />
+          <AitFeature Name="System.Action.Invoke" />
+          <AitFeature Name="System.Action`1" />
+          <AitFeature Name="System.CLSCompliantAttribute" />
+          <AitFeature Name="System.CLSCompliantAttribute..ctor" />
+          <AitFeature Name="System.Collections.Generic.Dictionary`2" />
+          <AitFeature Name="System.Collections.Generic.ICollection`1" />
+          <AitFeature Name="System.Collections.Generic.IDictionary`2" />
+          <AitFeature Name="System.DateTime" />
+          <AitFeature Name="System.DateTime.MinValue" />
+          <AitFeature Name="System.DateTime.get_Now" />
+          <AitFeature Name="System.DateTime.op_Subtraction" />
+          <AitFeature Name="System.Diagnostics.CodeAnalysis.SuppressMessageAttribute" />
+          <AitFeature Name="System.Diagnostics.CodeAnalysis.SuppressMessageAttribute..ctor" />
+          <AitFeature Name="System.Diagnostics.DebuggableAttribute" />
+          <AitFeature Name="System.Diagnostics.DebuggableAttribute..ctor" />
+          <AitFeature Name="System.Double" />
+          <AitFeature Name="System.EventHandler`1" />
+          <AitFeature Name="System.Exception" />
+          <AitFeature Name="System.Exception.get_Message" />
+          <AitFeature Name="System.Func`2" />
+          <AitFeature Name="System.Globalization.CultureInfo" />
+          <AitFeature Name="System.Globalization.CultureInfo.get_InvariantCulture" />
+          <AitFeature Name="System.IDisposable" />
+          <AitFeature Name="System.IFormatProvider" />
+          <AitFeature Name="System.Object" />
+          <AitFeature Name="System.Object..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyCompanyAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyCompanyAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyConfigurationAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyConfigurationAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyCopyrightAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyCopyrightAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyCultureAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyCultureAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyDescriptionAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyDescriptionAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyProductAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyProductAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyTitleAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyTitleAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyTrademarkAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyTrademarkAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyVersionAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyVersionAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilationRelaxationsAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilationRelaxationsAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilerGeneratedAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute..ctor" />
+          <AitFeature Name="System.Runtime.InteropServices.ComVisibleAttribute" />
+          <AitFeature Name="System.Runtime.InteropServices.ComVisibleAttribute..ctor" />
+          <AitFeature Name="System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken" />
+          <AitFeature Name="System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMarshal" />
+          <AitFeature Name="System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeMarshal.AddEventHandler" />
+          <AitFeature Name="System.Runtime.Versioning.TargetFrameworkAttribute" />
+          <AitFeature Name="System.Runtime.Versioning.TargetFrameworkAttribute..ctor" />
+          <AitFeature Name="System.RuntimeTypeHandle" />
+          <AitFeature Name="System.String" />
+          <AitFeature Name="System.String.Equals" />
+          <AitFeature Name="System.String.Format" />
+          <AitFeature Name="System.StringComparison" />
+          <AitFeature Name="System.Threading.Timer" />
+          <AitFeature Name="System.Threading.Timer..ctor" />
+          <AitFeature Name="System.Threading.Timer.Change" />
+          <AitFeature Name="System.Threading.Timer.Dispose" />
+          <AitFeature Name="System.Threading.TimerCallback" />
+          <AitFeature Name="System.Threading.TimerCallback..ctor" />
+          <AitFeature Name="System.TimeSpan" />
+          <AitFeature Name="System.TimeSpan.FromMilliseconds" />
+          <AitFeature Name="System.TimeSpan.FromSeconds" />
+          <AitFeature Name="System.TimeSpan.Zero" />
+          <AitFeature Name="System.TimeSpan.op_GreaterThan" />
+          <AitFeature Name="System.TimeSpan.op_LessThan" />
+          <AitFeature Name="System.TimeSpan.op_Subtraction" />
+          <AitFeature Name="System.Type" />
+          <AitFeature Name="System.Type.GetTypeFromHandle" />
+          <AitFeature Name="System.Type.get_AssemblyQualifiedName" />
+        </AitCategory>
+        <AitCategory Id="DotNetWinRt">
+          <AitFeature Name="Windows.UI.Core.CoreDispatcher" />
+          <AitFeature Name="Windows.UI.Core.CoreDispatcher.get_HasThreadAccess" />
+          <AitFeature Name="Windows.UI.Xaml.Controls.Panel" />
+          <AitFeature Name="Windows.UI.Xaml.DependencyObject" />
+          <AitFeature Name="Windows.UI.Xaml.DependencyObject.get_Dispatcher" />
+          <AitFeature Name="Windows.UI.Xaml.FrameworkElement" />
+          <AitFeature Name="Windows.UI.Xaml.FrameworkElement.get_ActualHeight" />
+          <AitFeature Name="Windows.UI.Xaml.FrameworkElement.get_ActualWidth" />
+          <AitFeature Name="Windows.UI.Xaml.FrameworkElement.get_Height" />
+          <AitFeature Name="Windows.UI.Xaml.FrameworkElement.get_Width" />
+          <AitFeature Name="Windows.UI.Xaml.FrameworkElement.put_Height" />
+          <AitFeature Name="Windows.UI.Xaml.FrameworkElement.put_Width" />
+          <AitFeature Name="Windows.UI.Xaml.RoutedEventArgs" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="ListenForConnecting.winmd" Id="0000c9a40202f64f4e0622dadf3d0b4d4ac1d1c33e28">
+        <AitCategory Id="DotNet">
+          <AitFeature Name="System.Boolean" />
+          <AitFeature Name="System.Collections.Generic.Dictionary`2" />
+          <AitFeature Name="System.Collections.Generic.Dictionary`2..ctor" />
+          <AitFeature Name="System.Collections.Generic.Dictionary`2.Add" />
+          <AitFeature Name="System.Collections.Generic.Dictionary`2.GetEnumerator" />
+          <AitFeature Name="System.Collections.Generic.IDictionary`2" />
+          <AitFeature Name="System.Collections.Generic.IDictionary`2.ContainsKey" />
+          <AitFeature Name="System.Collections.Generic.IDictionary`2.get_Item" />
+          <AitFeature Name="System.Collections.Generic.IEnumerable`1" />
+          <AitFeature Name="System.Collections.Generic.IEnumerable`1.GetEnumerator" />
+          <AitFeature Name="System.Collections.Generic.IEnumerator`1" />
+          <AitFeature Name="System.Collections.Generic.IEnumerator`1.get_Current" />
+          <AitFeature Name="System.Collections.Generic.KeyValuePair`2" />
+          <AitFeature Name="System.Collections.Generic.KeyValuePair`2.get_Key" />
+          <AitFeature Name="System.Collections.Generic.KeyValuePair`2.get_Value" />
+          <AitFeature Name="System.Collections.IEnumerator" />
+          <AitFeature Name="System.Collections.IEnumerator.MoveNext" />
+          <AitFeature Name="System.Diagnostics.DebuggableAttribute" />
+          <AitFeature Name="System.Diagnostics.DebuggableAttribute..ctor" />
+          <AitFeature Name="System.Diagnostics.DebuggerHiddenAttribute" />
+          <AitFeature Name="System.Diagnostics.DebuggerHiddenAttribute..ctor" />
+          <AitFeature Name="System.Exception" />
+          <AitFeature Name="System.IDisposable" />
+          <AitFeature Name="System.IDisposable.Dispose" />
+          <AitFeature Name="System.Int32" />
+          <AitFeature Name="System.Object" />
+          <AitFeature Name="System.Object..ctor" />
+          <AitFeature Name="System.Object.ToString" />
+          <AitFeature Name="System.Reflection.AssemblyCompanyAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyCompanyAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyConfigurationAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyConfigurationAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyCopyrightAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyCopyrightAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyDescriptionAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyDescriptionAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyFileVersionAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyFileVersionAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyProductAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyProductAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyTitleAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyTitleAttribute..ctor" />
+          <AitFeature Name="System.Reflection.AssemblyTrademarkAttribute" />
+          <AitFeature Name="System.Reflection.AssemblyTrademarkAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncStateMachineAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncStateMachineAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncVoidMethodBuilder" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Create" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetException" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetResult" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncVoidMethodBuilder.SetStateMachine" />
+          <AitFeature Name="System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilationRelaxationsAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilationRelaxationsAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilerGeneratedAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.CompilerGeneratedAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.IAsyncStateMachine" />
+          <AitFeature Name="System.Runtime.CompilerServices.IAsyncStateMachine.MoveNext" />
+          <AitFeature Name="System.Runtime.CompilerServices.IAsyncStateMachine.SetStateMachine" />
+          <AitFeature Name="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute" />
+          <AitFeature Name="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute..ctor" />
+          <AitFeature Name="System.Runtime.CompilerServices.TaskAwaiter`1" />
+          <AitFeature Name="System.Runtime.CompilerServices.TaskAwaiter`1.GetResult" />
+          <AitFeature Name="System.Runtime.CompilerServices.TaskAwaiter`1.get_IsCompleted" />
+          <AitFeature Name="System.Runtime.InteropServices.ComVisibleAttribute" />
+          <AitFeature Name="System.Runtime.InteropServices.ComVisibleAttribute..ctor" />
+          <AitFeature Name="System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeBufferExtensions" />
+          <AitFeature Name="System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeBufferExtensions.AsBuffer" />
+          <AitFeature Name="System.Runtime.Versioning.TargetFrameworkAttribute" />
+          <AitFeature Name="System.Runtime.Versioning.TargetFrameworkAttribute..ctor" />
+          <AitFeature Name="System.String" />
+          <AitFeature Name="System.String.Concat" />
+          <AitFeature Name="System.String.op_Equality" />
+          <AitFeature Name="System.Text.Encoding" />
+          <AitFeature Name="System.Text.Encoding.GetBytes" />
+          <AitFeature Name="System.Text.Encoding.get_UTF8" />
+          <AitFeature Name="System.Threading.CancellationToken" />
+          <AitFeature Name="System.Threading.CancellationTokenSource" />
+          <AitFeature Name="System.Threading.CancellationTokenSource..ctor" />
+          <AitFeature Name="System.Threading.CancellationTokenSource.get_Token" />
+          <AitFeature Name="System.Threading.Tasks.Task`1" />
+          <AitFeature Name="System.Threading.Tasks.Task`1.GetAwaiter" />
+          <AitFeature Name="System.Type" />
+          <AitFeature Name="System.Uri" />
+          <AitFeature Name="System.Uri..ctor" />
+          <AitFeature Name="System.ValueType" />
+          <AitFeature Name="System.WindowsRuntimeSystemExtensions" />
+          <AitFeature Name="System.WindowsRuntimeSystemExtensions.AsTask" />
+        </AitCategory>
+        <AitCategory Id="DotNetWinRt">
+          <AitFeature Name="Windows.ApplicationModel.Background.BackgroundTaskDeferral" />
+          <AitFeature Name="Windows.ApplicationModel.Background.BackgroundTaskDeferral.Complete" />
+          <AitFeature Name="Windows.ApplicationModel.Background.IBackgroundTask" />
+          <AitFeature Name="Windows.ApplicationModel.Background.IBackgroundTask.Run" />
+          <AitFeature Name="Windows.ApplicationModel.Background.IBackgroundTaskInstance" />
+          <AitFeature Name="Windows.ApplicationModel.Background.IBackgroundTaskInstance.GetDeferral" />
+          <AitFeature Name="Windows.Data.Xml.Dom.IXmlNode" />
+          <AitFeature Name="Windows.Data.Xml.Dom.IXmlNodeSerializer" />
+          <AitFeature Name="Windows.Data.Xml.Dom.IXmlNodeSerializer.put_InnerText" />
+          <AitFeature Name="Windows.Data.Xml.Dom.XmlDocument" />
+          <AitFeature Name="Windows.Data.Xml.Dom.XmlDocument.GetElementsByTagName" />
+          <AitFeature Name="Windows.Data.Xml.Dom.XmlNodeList" />
+          <AitFeature Name="Windows.Foundation.Collections.IPropertySet" />
+          <AitFeature Name="Windows.Foundation.IAsyncOperationWithProgress`2" />
+          <AitFeature Name="Windows.Foundation.IStringable" />
+          <AitFeature Name="Windows.Foundation.IStringable.ToString" />
+          <AitFeature Name="Windows.Foundation.Metadata.ActivatableAttribute" />
+          <AitFeature Name="Windows.Foundation.Metadata.ActivatableAttribute..ctor" />
+          <AitFeature Name="Windows.Foundation.Metadata.DefaultAttribute" />
+          <AitFeature Name="Windows.Foundation.Metadata.DefaultAttribute..ctor" />
+          <AitFeature Name="Windows.Foundation.Metadata.MarshalingBehaviorAttribute" />
+          <AitFeature Name="Windows.Foundation.Metadata.MarshalingBehaviorAttribute..ctor" />
+          <AitFeature Name="Windows.Foundation.Metadata.MarshalingType" />
+          <AitFeature Name="Windows.Foundation.Metadata.ThreadingAttribute" />
+          <AitFeature Name="Windows.Foundation.Metadata.ThreadingAttribute..ctor" />
+          <AitFeature Name="Windows.Foundation.Metadata.ThreadingModel" />
+          <AitFeature Name="Windows.Foundation.Metadata.VersionAttribute" />
+          <AitFeature Name="Windows.Foundation.Metadata.VersionAttribute..ctor" />
+          <AitFeature Name="Windows.Networking.Connectivity.ConnectionProfile" />
+          <AitFeature Name="Windows.Networking.Connectivity.ConnectionProfile.GetNetworkConnectivityLevel" />
+          <AitFeature Name="Windows.Networking.Connectivity.ConnectionProfile.get_ProfileName" />
+          <AitFeature Name="Windows.Networking.Connectivity.NetworkConnectivityLevel" />
+          <AitFeature Name="Windows.Networking.Connectivity.NetworkInformation" />
+          <AitFeature Name="Windows.Networking.Connectivity.NetworkInformation.GetInternetConnectionProfile" />
+          <AitFeature Name="Windows.Storage.ApplicationData" />
+          <AitFeature Name="Windows.Storage.ApplicationData.get_Current" />
+          <AitFeature Name="Windows.Storage.ApplicationData.get_LocalSettings" />
+          <AitFeature Name="Windows.Storage.ApplicationDataContainer" />
+          <AitFeature Name="Windows.Storage.ApplicationDataContainer.get_Values" />
+          <AitFeature Name="Windows.Storage.Streams.IBuffer" />
+          <AitFeature Name="Windows.UI.Notifications.ToastNotification" />
+          <AitFeature Name="Windows.UI.Notifications.ToastNotification..ctor" />
+          <AitFeature Name="Windows.UI.Notifications.ToastNotificationManager" />
+          <AitFeature Name="Windows.UI.Notifications.ToastNotificationManager.CreateToastNotifier" />
+          <AitFeature Name="Windows.UI.Notifications.ToastNotificationManager.GetTemplateContent" />
+          <AitFeature Name="Windows.UI.Notifications.ToastNotifier" />
+          <AitFeature Name="Windows.UI.Notifications.ToastNotifier.Show" />
+          <AitFeature Name="Windows.UI.Notifications.ToastTemplateType" />
+          <AitFeature Name="Windows.Web.Http.HttpBufferContent" />
+          <AitFeature Name="Windows.Web.Http.HttpBufferContent..ctor" />
+          <AitFeature Name="Windows.Web.Http.HttpClient" />
+          <AitFeature Name="Windows.Web.Http.HttpClient..ctor" />
+          <AitFeature Name="Windows.Web.Http.HttpClient.PostAsync" />
+          <AitFeature Name="Windows.Web.Http.HttpProgress" />
+          <AitFeature Name="Windows.Web.Http.HttpResponseMessage" />
+          <AitFeature Name="Windows.Web.Http.HttpResponseMessage.get_Content" />
+          <AitFeature Name="Windows.Web.Http.IHttpContent" />
+          <AitFeature Name="Windows.Web.Http.IHttpContent.ReadAsStringAsync" />
+        </AitCategory>
+      </AitFile>
+    </AitStaticAnalysis>
+  </DEPENDENCY_INFORMATION>
+</REPORT>

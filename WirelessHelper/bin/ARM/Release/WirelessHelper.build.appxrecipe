@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>DESKTOP-UI9RMNE</Machine>
+    <WindowsUser>lxy_S</WindowsUser>
+    <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
+    <TargetOsVersion>6.3</TargetOsVersion>
+    <TargetOsDescription>Windows Phone 8.1</TargetOsDescription>
+    <SolutionConfiguration>Release|ARM</SolutionConfiguration>
+    <PackageArchitecture>arm</PackageArchitecture>
+    <PackageIdentityName>e53a70db-560d-45dd-b968-024a800b0201</PackageIdentityName>
+    <IntermediateOutputPath>F:\Practise\WirelessHelper\WirelessHelper\obj\ARM\Release\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="F:\Practise\WirelessHelper\WirelessHelper\bin\ARM\Release\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="F:\Practise\WirelessHelper\WirelessHelper\bin\ARM\Release\WirelessHelper.exe">
+      <PackagePath>WirelessHelper.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\Microsoft.AdMediator81\1.0\References\CommonConfiguration\Neutral\Microsoft.AdMediator.Core.dll">
+      <PackagePath>Microsoft.AdMediator.Core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\Microsoft.AdMediator81\1.0\References\CommonConfiguration\Neutral\Microsoft.AdMediator.WindowsPhone81.dll">
+      <PackagePath>Microsoft.AdMediator.WindowsPhone81.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\Microsoft.AdMediator81\1.0\References\CommonConfiguration\ARM\Microsoft.AdMediator.WindowsPhone81.MicrosoftAdvertising.dll">
+      <PackagePath>Microsoft.AdMediator.WindowsPhone81.MicrosoftAdvertising.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\Microsoft.AdMediator81\1.0\References\CommonConfiguration\Neutral\Microsoft.Advertising.winmd">
+      <PackagePath>Microsoft.Advertising.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Practise\WirelessHelper\ListenForConnecting\bin\ARM\Release\ListenForConnecting.winmd">
+      <PackagePath>ListenForConnecting.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\Microsoft.AdMediator81\1.0\Redist\CommonConfiguration\Neutral\Microsoft.Advertising\bootstrap.html">
+      <PackagePath>Microsoft.Advertising\bootstrap.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\Microsoft.AdMediator81\1.0\Redist\CommonConfiguration\Neutral\MSAdvertisingJS\ads\bootstrap.js">
+      <PackagePath>MSAdvertisingJS\ads\bootstrap.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\Microsoft.AdMediator81\1.0\Redist\CommonConfiguration\Neutral\MSAdvertisingJS\ads\Ormma.js">
+      <PackagePath>MSAdvertisingJS\ads\Ormma.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\Microsoft.AdMediator81\1.0\Redist\CommonConfiguration\Neutral\Microsoft.AdMediator.WindowsPhone81\Themes\Generic.xbf">
+      <PackagePath>Microsoft.AdMediator.WindowsPhone81\Themes\Generic.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\Microsoft.AdMediator81\1.0\Redist\CommonConfiguration\Neutral\Microsoft.Advertising\Themes\Generic.xbf">
+      <PackagePath>Microsoft.Advertising\Themes\Generic.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\Microsoft.AdMediator81\1.0\Redist\CommonConfiguration\Neutral\Microsoft.AdMediator.WindowsPhone81.xr.xml">
+      <PackagePath>Microsoft.AdMediator.WindowsPhone81.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\Microsoft.AdMediator81\1.0\Redist\CommonConfiguration\ARM\UniversalXamlAdControl.WindowsPhone.dll">
+      <PackagePath>UniversalXamlAdControl.WindowsPhone.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Practise\WirelessHelper\WirelessHelper\Assets\106_106.scale-240.png">
+      <PackagePath>Assets\106_106.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Practise\WirelessHelper\WirelessHelper\Assets\120_120.scale-240.png">
+      <PackagePath>Assets\120_120.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Practise\WirelessHelper\WirelessHelper\Assets\150_150.scale-240.png">
+      <PackagePath>Assets\150_150.scale-240.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Practise\WirelessHelper\WirelessHelper\Assets\170_170.scale-240.png">
+      <PackagePath>Assets\170_170.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Practise\WirelessHelper\WirelessHelper\Assets\310_150.scale-240.png">
+      <PackagePath>Assets\310_150.scale-240.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Practise\WirelessHelper\WirelessHelper\Assets\360_360.scale-240.png">
+      <PackagePath>Assets\360_360.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Practise\WirelessHelper\WirelessHelper\Assets\58_58.scale-240.png">
+      <PackagePath>Assets\58_58.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Practise\WirelessHelper\WirelessHelper\Assets\672_1120.scale-140.png">
+      <PackagePath>Assets\672_1120.scale-140.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Practise\WirelessHelper\WirelessHelper\Assets\744_360.scale-240.png">
+      <PackagePath>Assets\744_360.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Practise\WirelessHelper\WirelessHelper\AdMediator.config">
+      <PackagePath>AdMediator.config</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Practise\WirelessHelper\WirelessHelper\bin\ARM\Release\WirelessHelper.xr.xml">
+      <PackagePath>WirelessHelper.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Practise\WirelessHelper\WirelessHelper\bin\ARM\Release\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Practise\WirelessHelper\WirelessHelper\bin\ARM\Release\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Practise\WirelessHelper\WirelessHelper\bin\ARM\Release\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\">
+      <Name>Microsoft.VCLibs.120.00.Phone</Name>
+      <Version>12.0.30113.0</Version>
+      <Architecture>ARM</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.120.00.Phone, MinVersion = 12.0.30113.0</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\.\AppX\Retail\ARM\Microsoft.VCLibs.ARM.12.00.Phone.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\">
+      <Name>Microsoft.VCLibs.120.00.Phone</Name>
+      <Version>12.0.30113.0</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.120.00.Phone, MinVersion = 12.0.30113.0</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\.\AppX\Retail\x86\Microsoft.VCLibs.x86.12.00.Phone.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>

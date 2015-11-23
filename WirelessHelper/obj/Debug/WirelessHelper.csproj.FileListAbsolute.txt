@@ -34,3 +34,5 @@ E:\Practise\WirelessHelper\WirelessHelper\bin\Debug\ListenForConnecting.winmd
 E:\Practise\WirelessHelper\WirelessHelper\bin\Debug\ListenForConnecting.pdb
 E:\Practise\WirelessHelper\WirelessHelper\bin\Debug\ListenForConnecting.pri
 E:\Practise\WirelessHelper\WirelessHelper\obj\Debug\WirelessHelper.csprojResolveAssemblyReference.cache
+F:\Practise\WirelessHelper\WirelessHelper\obj\Debug\WirelessHelper.exe
+F:\Practise\WirelessHelper\WirelessHelper\obj\Debug\WirelessHelper.pdb

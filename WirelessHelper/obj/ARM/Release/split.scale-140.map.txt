@@ -1,0 +1,7 @@
+﻿[ResourceMetadata]
+"ResourceId"			"split.scale-140"
+"ResourceDimensions"		"scale-140"
+
+[Files]
+"F:\Practise\WirelessHelper\WirelessHelper\obj\ARM\Release\split.scale-140.pri"			"resources.pri"
+"F:\Practise\WirelessHelper\WirelessHelper\obj\ARM\Release\PackageLayout\Assets\672_1120.scale-140.png"			"Assets\672_1120.scale-140.png"

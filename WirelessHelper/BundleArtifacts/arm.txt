@@ -1,0 +1,4 @@
+MainPackage=F:\Practise\WirelessHelper\WirelessHelper\bin\ARM\Release\WirelessHelper_1.4.0.1_ARM.appx
+SymbolPackage=F:\Practise\WirelessHelper\WirelessHelper\AppPackages\WirelessHelper_1.4.0.1_Test\WirelessHelper_1.4.0.1_ARM.appxsym
+ResourcePack=F:\Practise\WirelessHelper\WirelessHelper\bin\ARM\Release\WirelessHelper_1.4.0.1_language-zh-hans.appx
+ResourcePack=F:\Practise\WirelessHelper\WirelessHelper\bin\ARM\Release\WirelessHelper_1.4.0.1_scale-140.appx
